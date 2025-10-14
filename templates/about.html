@@ -1,149 +1,332 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Chicago World's Fair</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#001f3f",
-                        "accent": "#daa520",
-                        "secondary": "#fdf6e3",
-                        "background-light": "#fdf6e3",
-                        "background-dark": "#101a22",
-                        "text-light": "#111518",
-                        "text-dark": "#fdf6e3",
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"],
-                        "sans": ["Lato", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Chicago World's Fair</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&amp;family=Lato:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#001f3f",
+              accent: "#daa520",
+              secondary: "#fdf6e3",
+              "background-light": "#fdf6e3",
+              "background-dark": "#101a22",
+              "text-light": "#111518",
+              "text-dark": "#fdf6e3",
             },
-        }
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Newsreader', serif;
-        }
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Newsreader", serif;
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<!-- Hero Section -->
-<div class="@container">
-<div class="@[480px]:p-4">
-<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="A grand, black and white photograph of the 'White City' at the 1893 Chicago World's Fair, showcasing neoclassical buildings and a large basin of water." style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1vpdZNcCUFmB6lA-qnKo2Q4fbNclN4UJj-8sLVy082mXff2lsqwAIT5FOypqx1Ps1t_6lUx3TZ2IB0BJsSqVQnOpPfHaH2Ib5fVcZZkfMC5K8Tka2dWufZmWzPlYKKdE61E0jjv0oCYa7Fj7L52duBrRvjw6x5_m4gXpgRuByZTVXtuRW1gI-Sxc-WKAC1n9tg1792JBzADLCw8n1UmQZr85QhKCbhbN2tqmWCMYOxIKp1BIkikTfbpriTk3h3T1bON_lKn-Xt_4");'>
-<div class="flex flex-col gap-2 text-center">
-<h1 class="text-secondary text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] font-display">
-                                        The White City: A Triumph of Imagination
-                                    </h1>
-<h2 class="text-secondary text-sm font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal font-sans">
-                                        Explore the 1893 Chicago World's Fair, a spectacle that captivated a nation and showcased the dawn of a new era.
-                                    </h2>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-accent text-primary text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] font-sans hover:bg-opacity-90 transition-colors">
-<span class="truncate">Discover the Story</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Section 1: The Vision -->
-<h2 class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">The Vision</h2>
-<p class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed pb-3 pt-1 px-4 font-sans">
-                        The World's Columbian Exposition, held in 1893, was more than just a fair; it was a bold declaration of American ingenuity and cultural ambition. Conceived to commemorate the 400th anniversary of Christopher Columbus's arrival in the New World, the fair's organizers aimed to create a spectacle that would rival and surpass the great expositions of Europe. Their vision was to build a temporary, dream-like metropolis, a "White City," featuring gleaming neoclassical architecture, serene lagoons, and grand boulevards—a stark contrast to the gritty, industrial reality of 19th-century Chicago.
-                    </p>
-<!-- Section 2: The Masterminds -->
-<h2 class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">The Masterminds</h2>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 p-4">
-<div class="flex flex-col gap-3 pb-3 border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-background-dark shadow-sm">
-<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg" data-alt="A sepia-toned portrait of Daniel Burnham, a man with a mustache, wearing a suit." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDypXc7ojgcmcHodk690YNy0Sio4gOvI1TrYKfICcWiLjZqU8o-QvVI0u-i5l5k_gzmNtQ5q-akYx9Ly-wmpKaYNMX9BT7dRKoW66nvxNcfq86BY8x8JrJd7r-3Y3M5cvitZxDSrPbwit6cSCuiXTJUbSXFgpKGP01VnZx76od3OdBUTzzkESgsbelOIFM_gw5zzk85WD0_oL9hC640yoxpIyKSqAa3LYqeyOZFnb24TCoRCS3G4MFnG0QVKc2rhYukDU-qesJsXp4");'></div>
-<div>
-<p class="text-primary dark:text-accent text-xl font-bold leading-normal font-display">Daniel Burnham</p>
-<p class="text-text-light dark:text-text-dark/80 text-sm font-medium leading-normal font-sans">Director of Works</p>
-<p class="text-text-light/80 dark:text-text-dark/70 text-sm font-normal leading-normal mt-2 font-sans">
-                                    The visionary architect who famously declared, "Make no little plans." Burnham oversaw the entire construction of the Fair, transforming a swampy park into a neoclassical wonderland.
-                                </p>
-</div>
-</div>
-<div class="flex flex-col gap-3 pb-3 border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-background-dark shadow-sm">
-<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg" data-alt="A sepia-toned portrait of Frederick Law Olmsted, an older man with a long white beard, looking thoughtful." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgTbIRbR82sHVbQxXdriTGIInLIJpuTYdKu6kSs4eiQUXst5uZVsnjhNKurKadHdIrgbEDJhufHZjeUJtIBLuaS2aWZE1SMOunBHJ-c14YV9GGtor0NiYGrhAaTSkwCquUMlUcR9zr1xO08WtqvzRKmfEVJOxQ8e7y_uClUfB6bg8xFdgCTrZsqs9vgEzGpTCFYNUQMqam3IEx8CraY2C6xpBlun92mFHvtPIHLgEr6wQcQXuLgKttsfFIrJTIzlmkj5cGThkgqOg");'></div>
-<div>
-<p class="text-primary dark:text-accent text-xl font-bold leading-normal font-display">Frederick Law Olmsted</p>
-<p class="text-text-light dark:text-text-dark/80 text-sm font-medium leading-normal font-sans">Landscape Architect</p>
-<p class="text-text-light/80 dark:text-text-dark/70 text-sm font-normal leading-normal mt-2 font-sans">
-                                    The renowned designer of New York's Central Park, Olmsted sculpted the fairgrounds, creating a harmonious balance between grand buildings and natural beauty with lagoons and wooded islands.
-                                </p>
-</div>
-</div>
-</div>
-<!-- "Did You Know?" Callout Box -->
-<div class="p-4 my-8">
-<div class="bg-primary/10 dark:bg-primary/20 border-l-4 border-accent p-6 rounded-r-lg">
-<h3 class="font-display text-xl font-bold text-primary dark:text-accent mb-2">Did You Know?</h3>
-<p class="font-sans text-text-light dark:text-text-dark leading-relaxed">The Ferris Wheel, one of the world's first, made its debut at the Chicago World's Fair. It stood an astonishing 264 feet tall and could carry over 2,000 passengers at a time, offering breathtaking views of the "White City" and beyond.</p>
-</div>
-</div>
-<!-- Section 3: Forging a City -->
-<h2 class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">Forging a City</h2>
-<p class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed pb-3 pt-1 px-4 font-sans">
-                        The construction of the Fair was a monumental undertaking. In just over two years, a workforce of thousands dredged swamps, sculpted landscapes, and erected over 200 buildings. The structures, though appearing to be made of stone, were primarily constructed from a mixture of plaster, cement, and jute fiber called "staff," which was easily molded and painted white, creating the illusion of a grand, permanent city.
-                    </p>
-<!-- Section 4: By the Numbers -->
-<h2 class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">By the Numbers</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 text-center">
-<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
-<p class="font-display text-4xl font-bold text-accent">27M+</p>
-<p class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2">Total Visitors</p>
-</div>
-<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
-<p class="font-display text-4xl font-bold text-accent">690</p>
-<p class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2">Acres</p>
-</div>
-<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
-<p class="font-display text-4xl font-bold text-accent">200+</p>
-<p class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2">New Buildings</p>
-</div>
-<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
-<p class="font-display text-4xl font-bold text-accent">46</p>
-<p class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2">Nations Represented</p>
-</div>
-</div>
-<!-- Section 5: A Glimpse into the Past -->
-<h2 class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">A Glimpse into the Past</h2>
-<div class="p-4">
-<div class="columns-2 md:columns-3 gap-4">
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="A black and white photo of the Grand Basin and Court of Honor at the World's Fair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfXiIcPnnDqYKwOxfRC7yQsEsPbitJrWjFW-goRI0n3uEwIXCqqpR74VAl2tOUPWruKpmX_IM_HYXLcwdWCJdeCOK7CL-cNluhU0ahuZUqwLgUVsJEEn6rZqICQ30DAmw9cWcIuGRfWi9C9uaqO_kXng3fuW4K0Pxv1kTdOwq1qdAoJR8P0t190a4ac-034mNzUl0nMUbaFVq-HDpKm1Ks4GCJvmDbWy8XgqruHf7OllsmPcYn9UKF_4nXLe6LK7BXQ5eg-t1ltI0"/>
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="A vintage photograph of the Ferris Wheel at the 1893 World's Fair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq3k6eqiAw7ERMQze7ohWBzjL1idjR-nfZma46hHuLJy8-z32kvX93YkVd8YRH3pcAXcoeW9i1JV2ap3vTORy3hDiu86Ht9hPA4hPZSDtfM2SptfbcxUfiBi35-AF2ap3m_hEQxP-GkOC72jFCzfYBrzp2Qwjt6Umnde2KJlermue0WQijLa41yH3uu42gdqVn9BmJzxQNbE7WibM9M8MotvPIX_tLXtb0GUwDPMIc7qfqmXNO8evOyfjmlJ_lG0pe6v9HTPDTbiw"/>
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="Sepia-toned image of the Woman's Building at the Fair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5mes1h5btnYuMUy0IgJ73UcmM6FQE3_ZoSH6xyDFFz8s_gknC22WUcIReNXG7ZdGQj7PPUiyNFdZ-_IOR5tW1cmqTngcBKlDEqxmUm0Xd6gzKWmM50CfwRLV6qw6knsoeDzViyI27qCH9WIJsCielynnDtSFHZioOqQQ8lyhJZprcPtpmom0MFBYtRZZsNLbzDv9eGP7u6rjsb2ZGHGWvSVIKL7s1FAlwq4Ei73N3yzmhIqNtdH22SPGYU4N2Vgc562z5LPJZK0"/>
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="A historical photo of the Administration Building illuminated at night." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYH4P46KCO36Y0xl4DVsmAf9w_cIXX0xDDj-oLaC1Yl8Th6ajwNEY33z6UW23P4fkpYUlycsC7KSTAq_kCwGHsYAhgHHSIVMRZXpucpDVJJ4KLVxLfTYZ9IVfTsv6AAZdTsMhMcAa0OCx5Q7vxit_TSWHckTktLvo-RxHTSAuDdiefh2Sx3qdccBe-SZqH-ZhT5N5C-m6rBes3VacylO1STi-pn0U9rw6Rync8FyWM4ASh3NNHVetb3uFxi4DPyFfOv5V9g6jMO4U"/>
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="An illustration of the bustling Midway Plaisance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3V8-Hrd9rR3sT2v0dCglBM_HhjVRHDAbRYt65X00qTZVNK2Pei8gaVBwHqcw1FkDZqjERNRTi9R3WjuasXWvpX7EX3cK_eyYjMeEUobCjyzjNfKVjPT9ywTyrlK-JJSHFgzcOx6-qmBIIp2si8CnKFA7kZmPZfeMxMnO6pUYyQ4E-ZcDYx1hlEqPpSCwPc8lgCEsoqINmXJfonqpkQaOON5lXuXyTXHHAYduUp8vdMQouq1sq9bJHgi6ybGjH2ThmwaZPirMCp-M"/>
-<img class="mb-4 rounded-lg shadow-md w-full" data-alt="A photograph of the intricate golden door of the Transportation Building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsWcHi3yMl-BxrG-7b7R4g9lShD0YKKbYN-YwGN7b6GdKJ_FnblghNhI0tYrw5NcEFyee8qOVK3oMztHSuj-9I9u5SKhYFqnjo_t7NWhiTG_oQizP6H6QEvhwb67rDv_jqjr6zqAKJUzFYDnoNI08t2t1HonjOKgm8U6hTW262-rW9O0hgRH8YiMykGPWzcXwte7qdiPBXRgNsnm8BtuojMJUvwd2Be59K4N4u9kwjTiuRWVbiK2aWkmLfluO--PZrQqhjLLOmx38"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+      style="font-family: Newsreader, 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div
+          class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5"
+        >
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <!-- Hero Section -->
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  data-alt="A grand, black and white photograph of the 'White City' at the 1893 Chicago World's Fair, showcasing neoclassical buildings and a large basin of water."
+                  style="
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.3) 0%,
+                        rgba(0, 0, 0, 0.6) 100%
+                      ),
+                      url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1vpdZNcCUFmB6lA-qnKo2Q4fbNclN4UJj-8sLVy082mXff2lsqwAIT5FOypqx1Ps1t_6lUx3TZ2IB0BJsSqVQnOpPfHaH2Ib5fVcZZkfMC5K8Tka2dWufZmWzPlYKKdE61E0jjv0oCYa7Fj7L52duBrRvjw6x5_m4gXpgRuByZTVXtuRW1gI-Sxc-WKAC1n9tg1792JBzADLCw8n1UmQZr85QhKCbhbN2tqmWCMYOxIKp1BIkikTfbpriTk3h3T1bON_lKn-Xt_4');
+                  "
+                >
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-secondary text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] font-display"
+                    >
+                      The White City: A Triumph of Imagination
+                    </h1>
+                    <h2
+                      class="text-secondary text-sm font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal font-sans"
+                    >
+                      Explore the 1893 Chicago World's Fair, a spectacle that
+                      captivated a nation and showcased the dawn of a new era.
+                    </h2>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-accent text-primary text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] font-sans hover:bg-opacity-90 transition-colors"
+                  >
+                    <span class="truncate">Discover the Story</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Section 1: The Vision -->
+            <h2
+              class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+            >
+              The Vision
+            </h2>
+            <p
+              class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed pb-3 pt-1 px-4 font-sans"
+            >
+              The World's Columbian Exposition, held in 1893, was more than just
+              a fair; it was a bold declaration of American ingenuity and
+              cultural ambition. Conceived to commemorate the 400th anniversary
+              of Christopher Columbus's arrival in the New World, the fair's
+              organizers aimed to create a spectacle that would rival and
+              surpass the great expositions of Europe. Their vision was to build
+              a temporary, dream-like metropolis, a "White City," featuring
+              gleaming neoclassical architecture, serene lagoons, and grand
+              boulevards—a stark contrast to the gritty, industrial reality of
+              19th-century Chicago.
+            </p>
+            <!-- Section 2: The Masterminds -->
+            <h2
+              class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+            >
+              The Masterminds
+            </h2>
+            <div
+              class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 p-4"
+            >
+              <div
+                class="flex flex-col gap-3 pb-3 border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-background-dark shadow-sm"
+              >
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg"
+                  data-alt="A sepia-toned portrait of Daniel Burnham, a man with a mustache, wearing a suit."
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDypXc7ojgcmcHodk690YNy0Sio4gOvI1TrYKfICcWiLjZqU8o-QvVI0u-i5l5k_gzmNtQ5q-akYx9Ly-wmpKaYNMX9BT7dRKoW66nvxNcfq86BY8x8JrJd7r-3Y3M5cvitZxDSrPbwit6cSCuiXTJUbSXFgpKGP01VnZx76od3OdBUTzzkESgsbelOIFM_gw5zzk85WD0_oL9hC640yoxpIyKSqAa3LYqeyOZFnb24TCoRCS3G4MFnG0QVKc2rhYukDU-qesJsXp4');
+                  "
+                ></div>
+                <div>
+                  <p
+                    class="text-primary dark:text-accent text-xl font-bold leading-normal font-display"
+                  >
+                    Daniel Burnham
+                  </p>
+                  <p
+                    class="text-text-light dark:text-text-dark/80 text-sm font-medium leading-normal font-sans"
+                  >
+                    Director of Works
+                  </p>
+                  <p
+                    class="text-text-light/80 dark:text-text-dark/70 text-sm font-normal leading-normal mt-2 font-sans"
+                  >
+                    The visionary architect who famously declared, "Make no
+                    little plans." Burnham oversaw the entire construction of
+                    the Fair, transforming a swampy park into a neoclassical
+                    wonderland.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-3 pb-3 border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-background-dark shadow-sm"
+              >
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg"
+                  data-alt="A sepia-toned portrait of Frederick Law Olmsted, an older man with a long white beard, looking thoughtful."
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgTbIRbR82sHVbQxXdriTGIInLIJpuTYdKu6kSs4eiQUXst5uZVsnjhNKurKadHdIrgbEDJhufHZjeUJtIBLuaS2aWZE1SMOunBHJ-c14YV9GGtor0NiYGrhAaTSkwCquUMlUcR9zr1xO08WtqvzRKmfEVJOxQ8e7y_uClUfB6bg8xFdgCTrZsqs9vgEzGpTCFYNUQMqam3IEx8CraY2C6xpBlun92mFHvtPIHLgEr6wQcQXuLgKttsfFIrJTIzlmkj5cGThkgqOg');
+                  "
+                ></div>
+                <div>
+                  <p
+                    class="text-primary dark:text-accent text-xl font-bold leading-normal font-display"
+                  >
+                    Frederick Law Olmsted
+                  </p>
+                  <p
+                    class="text-text-light dark:text-text-dark/80 text-sm font-medium leading-normal font-sans"
+                  >
+                    Landscape Architect
+                  </p>
+                  <p
+                    class="text-text-light/80 dark:text-text-dark/70 text-sm font-normal leading-normal mt-2 font-sans"
+                  >
+                    The renowned designer of New York's Central Park, Olmsted
+                    sculpted the fairgrounds, creating a harmonious balance
+                    between grand buildings and natural beauty with lagoons and
+                    wooded islands.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- "Did You Know?" Callout Box -->
+            <div class="p-4 my-8">
+              <div
+                class="bg-primary/10 dark:bg-primary/20 border-l-4 border-accent p-6 rounded-r-lg"
+              >
+                <h3
+                  class="font-display text-xl font-bold text-primary dark:text-accent mb-2"
+                >
+                  Did You Know?
+                </h3>
+                <p
+                  class="font-sans text-text-light dark:text-text-dark leading-relaxed"
+                >
+                  The Ferris Wheel, one of the world's first, made its debut at
+                  the Chicago World's Fair. It stood an astonishing 264 feet
+                  tall and could carry over 2,000 passengers at a time, offering
+                  breathtaking views of the "White City" and beyond.
+                </p>
+              </div>
+            </div>
+            <!-- Section 3: Forging a City -->
+            <h2
+              class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+            >
+              Forging a City
+            </h2>
+            <p
+              class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed pb-3 pt-1 px-4 font-sans"
+            >
+              The construction of the Fair was a monumental undertaking. In just
+              over two years, a workforce of thousands dredged swamps, sculpted
+              landscapes, and erected over 200 buildings. The structures, though
+              appearing to be made of stone, were primarily constructed from a
+              mixture of plaster, cement, and jute fiber called "staff," which
+              was easily molded and painted white, creating the illusion of a
+              grand, permanent city.
+            </p>
+            <!-- Section 4: By the Numbers -->
+            <h2
+              class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+            >
+              By the Numbers
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 text-center">
+              <div
+                class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+              >
+                <p class="font-display text-4xl font-bold text-accent">27M+</p>
+                <p
+                  class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2"
+                >
+                  Total Visitors
+                </p>
+              </div>
+              <div
+                class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+              >
+                <p class="font-display text-4xl font-bold text-accent">690</p>
+                <p
+                  class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2"
+                >
+                  Acres
+                </p>
+              </div>
+              <div
+                class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+              >
+                <p class="font-display text-4xl font-bold text-accent">200+</p>
+                <p
+                  class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2"
+                >
+                  New Buildings
+                </p>
+              </div>
+              <div
+                class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm"
+              >
+                <p class="font-display text-4xl font-bold text-accent">46</p>
+                <p
+                  class="font-sans text-sm text-text-light/80 dark:text-text-dark/70 mt-2"
+                >
+                  Nations Represented
+                </p>
+              </div>
+            </div>
+            <!-- Section 5: A Glimpse into the Past -->
+            <h2
+              class="text-primary dark:text-accent text-[28px] md:text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+            >
+              A Glimpse into the Past
+            </h2>
+            <div class="p-4">
+              <div class="columns-2 md:columns-3 gap-4">
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="A black and white photo of the Grand Basin and Court of Honor at the World's Fair."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfXiIcPnnDqYKwOxfRC7yQsEsPbitJrWjFW-goRI0n3uEwIXCqqpR74VAl2tOUPWruKpmX_IM_HYXLcwdWCJdeCOK7CL-cNluhU0ahuZUqwLgUVsJEEn6rZqICQ30DAmw9cWcIuGRfWi9C9uaqO_kXng3fuW4K0Pxv1kTdOwq1qdAoJR8P0t190a4ac-034mNzUl0nMUbaFVq-HDpKm1Ks4GCJvmDbWy8XgqruHf7OllsmPcYn9UKF_4nXLe6LK7BXQ5eg-t1ltI0"
+                />
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="A vintage photograph of the Ferris Wheel at the 1893 World's Fair."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq3k6eqiAw7ERMQze7ohWBzjL1idjR-nfZma46hHuLJy8-z32kvX93YkVd8YRH3pcAXcoeW9i1JV2ap3vTORy3hDiu86Ht9hPA4hPZSDtfM2SptfbcxUfiBi35-AF2ap3m_hEQxP-GkOC72jFCzfYBrzp2Qwjt6Umnde2KJlermue0WQijLa41yH3uu42gdqVn9BmJzxQNbE7WibM9M8MotvPIX_tLXtb0GUwDPMIc7qfqmXNO8evOyfjmlJ_lG0pe6v9HTPDTbiw"
+                />
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="Sepia-toned image of the Woman's Building at the Fair."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5mes1h5btnYuMUy0IgJ73UcmM6FQE3_ZoSH6xyDFFz8s_gknC22WUcIReNXG7ZdGQj7PPUiyNFdZ-_IOR5tW1cmqTngcBKlDEqxmUm0Xd6gzKWmM50CfwRLV6qw6knsoeDzViyI27qCH9WIJsCielynnDtSFHZioOqQQ8lyhJZprcPtpmom0MFBYtRZZsNLbzDv9eGP7u6rjsb2ZGHGWvSVIKL7s1FAlwq4Ei73N3yzmhIqNtdH22SPGYU4N2Vgc562z5LPJZK0"
+                />
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="A historical photo of the Administration Building illuminated at night."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYH4P46KCO36Y0xl4DVsmAf9w_cIXX0xDDj-oLaC1Yl8Th6ajwNEY33z6UW23P4fkpYUlycsC7KSTAq_kCwGHsYAhgHHSIVMRZXpucpDVJJ4KLVxLfTYZ9IVfTsv6AAZdTsMhMcAa0OCx5Q7vxit_TSWHckTktLvo-RxHTSAuDdiefh2Sx3qdccBe-SZqH-ZhT5N5C-m6rBes3VacylO1STi-pn0U9rw6Rync8FyWM4ASh3NNHVetb3uFxi4DPyFfOv5V9g6jMO4U"
+                />
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="An illustration of the bustling Midway Plaisance."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3V8-Hrd9rR3sT2v0dCglBM_HhjVRHDAbRYt65X00qTZVNK2Pei8gaVBwHqcw1FkDZqjERNRTi9R3WjuasXWvpX7EX3cK_eyYjMeEUobCjyzjNfKVjPT9ywTyrlK-JJSHFgzcOx6-qmBIIp2si8CnKFA7kZmPZfeMxMnO6pUYyQ4E-ZcDYx1hlEqPpSCwPc8lgCEsoqINmXJfonqpkQaOON5lXuXyTXHHAYduUp8vdMQouq1sq9bJHgi6ybGjH2ThmwaZPirMCp-M"
+                />
+                <img
+                  class="mb-4 rounded-lg shadow-md w-full"
+                  data-alt="A photograph of the intricate golden door of the Transportation Building."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsWcHi3yMl-BxrG-7b7R4g9lShD0YKKbYN-YwGN7b6GdKJ_FnblghNhI0tYrw5NcEFyee8qOVK3oMztHSuj-9I9u5SKhYFqnjo_t7NWhiTG_oQizP6H6QEvhwb67rDv_jqjr6zqAKJUzFYDnoNI08t2t1HonjOKgm8U6hTW262-rW9O0hgRH8YiMykGPWzcXwte7qdiPBXRgNsnm8BtuojMJUvwd2Be59K4N4u9kwjTiuRWVbiK2aWkmLfluO--PZrQqhjLLOmx38"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
