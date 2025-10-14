@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago World's Fair - Home</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Tailwind CSS CDN (for development) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+
+                    <!-- Header -->
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3">
+                        <div class="flex items-center gap-4 text-black dark:text-white">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold leading-tight font-display">Chicago World's Fair</h2>
+                        </div>
+                        <div class="hidden md:flex flex-1 justify-end gap-8">
+                            <nav class="flex items-center gap-9">
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="#">Exhibits</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/events.html">Map & Schedule</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/tickets.html">Tickets & Lodging</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/business-registration.html">For Businesses</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="#">News</a>
+                            </nav>
+                        </div>
+                        <div class="md:hidden mobile-menu-button">
+                            <button class="material-symbols-outlined">menu</button>
+                        </div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <main>
+                        <!-- Hero Section -->
+                        <div class="@container">
+                            <div class="@[480px]:p-4">
+                                <div class="hero-section flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+                                     style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 128, 0.6) 100%), url("/static/images/hero-white-city.jpg");'>
+                                    <div class="flex flex-col gap-2 text-center">
+                                        <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl font-display">
+                                            Welcome to the World's Columbian Exposition
+                                        </h1>
+                                        <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base">
+                                            Experience the Future, Celebrate the Past. A Spectacle of Innovation and Culture in the Heart of Chicago.
+                                        </h2>
+                                    </div>
+                                    <div class="flex-wrap gap-3 flex justify-center">
+                                        <button class="btn-primary flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5">
+                                            <span class="truncate">Explore the Exhibits</span>
+                                        </button>
+                                        <button class="btn-secondary flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5">
+                                            <span class="truncate">View the Map</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Attractions -->
+                        <h2 class="text-black dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-display">Featured Attractions</h2>
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                     style='background-image: url("/static/images/ferris-wheel.jpg");'></div>
+                                <div>
+                                    <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Ferris Wheel</p>
+                                    <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">A marvel of engineering, offering breathtaking views of the fairgrounds.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                     style='background-image: url("/static/images/palace-fine-arts.jpg");'></div>
+                                <div>
+                                    <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Palace of Fine Arts</p>
+                                    <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">Home to a vast collection of art from around the world.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3">
+                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                     style='background-image: url("/static/images/electricity-building.jpg");'></div>
+                                <div>
+                                    <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Electricity Building</p>
+                                    <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">A dazzling display of the latest electrical innovations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Footer -->
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="#">History of the Fair</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="#">Organizers</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="#">Sponsors</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="#">Press</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="#">Contact</a>
+                        </div>
+                        <p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">© 1893 World's Columbian Exposition</p>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

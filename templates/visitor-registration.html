@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chicago World's Fair Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200;6..72,300;6..72,400;6..72,500;6..72,600;6..72,700;6..72,800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#F5F5DC",
+                        "background-dark": "#001f3f",
+                        "text-light": "#001f3f",
+                        "text-dark": "#F5F5DC",
+                        "accent": "#008080"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F5F5DC;
+        }
+
+        .dark body {
+            background-color: #001f3f;
+        }
+        .form-checkbox:checked {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+
+        .form-radio:checked {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+
+        .form-input {
+            background-color: #F5F5DC;
+            border: 1px solid #001f3f;
+            color: #001f3f;
+        }
+
+        .form-input::placeholder {
+            color: #001f3f;
+            opacity: 0.7;
+        }
+
+        .dark .form-input {
+            background-color: #001f3f;
+            border: 1px solid #D4AF37;
+            color: #F5F5DC;
+        }
+
+        .dark .form-input::placeholder {
+            color: #F5F5DC;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex w-full flex-col gap-3 text-center">
+<p class="font-display text-4xl font-black leading-tight tracking-[-0.033em] text-text-light dark:text-text-dark">Chicago World's Fair: Your Personal Itinerary Awaits!</p>
+<p class="font-sans text-base font-normal leading-normal text-accent">Register for exclusive updates and tailor your visit to the wonders of the fair.</p>
+</div>
+</div>
+<div class="w-full mt-8">
+<div class="border-t-2 border-b-2 border-primary py-8 px-4 md:px-8">
+<h2 class="font-display text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-text-light dark:text-text-dark">Personal Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+<label class="flex flex-col flex-1">
+<p class="font-sans text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Full Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary h-14 placeholder:text-[#617789] p-4 text-base font-normal leading-normal dark:bg-[#001f3f] dark:text-[#f0f2f4] dark:placeholder:text-[#617789] border border-text-light dark:border-primary" placeholder="Enter your full name" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="font-sans text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary h-14 placeholder:text-[#617789] p-4 text-base font-normal leading-normal dark:bg-[#001f3f] dark:text-[#f0f2f4] dark:placeholder:text-[#617789] border border-text-light dark:border-primary" placeholder="Enter your email address" type="email" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="font-sans text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">City</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary h-14 placeholder:text-[#617789] p-4 text-base font-normal leading-normal dark:bg-[#001f3f] dark:text-[#f0f2f4] dark:placeholder:text-[#617789] border border-text-light dark:border-primary" placeholder="Enter your city" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="font-sans text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">State/Country</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary h-14 placeholder:text-[#617789] p-4 text-base font-normal leading-normal dark:bg-[#001f3f] dark:text-[#f0f2f4] dark:placeholder:text-[#617789] border border-text-light dark:border-primary" placeholder="Enter your state/country" value=""/>
+</label>
+</div>
+<h2 class="font-display text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8 text-text-light dark:text-text-dark">Tell Us Your Interests</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+<label class="flex items-center space-x-3">
+<input class="form-checkbox h-5 w-5 rounded text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" type="checkbox"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Inventions &amp; Technology</span>
+</label>
+<label class="flex items-center space-x-3">
+<input class="form-checkbox h-5 w-5 rounded text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" type="checkbox"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Arts &amp; Culture</span>
+</label>
+<label class="flex items-center space-x-3">
+<input class="form-checkbox h-5 w-5 rounded text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" type="checkbox"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Exotic Exhibits</span>
+</label>
+<label class="flex items-center space-x-3">
+<input class="form-checkbox h-5 w-5 rounded text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" type="checkbox"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Entertainment &amp; Midway</span>
+</label>
+</div>
+<h2 class="font-display text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8 text-text-light dark:text-text-dark">Notification Preferences</h2>
+<div class="flex flex-col md:flex-row gap-4 p-4">
+<label class="flex items-center space-x-3">
+<input class="form-radio h-5 w-5 text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" name="notifications" type="radio"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Daily Updates</span>
+</label>
+<label class="flex items-center space-x-3">
+<input class="form-radio h-5 w-5 text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" name="notifications" type="radio"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Weekly Digest</span>
+</label>
+<label class="flex items-center space-x-3">
+<input class="form-radio h-5 w-5 text-primary focus:ring-primary border-text-light dark:border-primary bg-background-light dark:bg-background-dark" name="notifications" type="radio"/>
+<span class="font-sans text-base text-text-light dark:text-text-dark">Major Announcements Only</span>
+</label>
+</div>
+<div class="flex justify-center items-center gap-4 px-4 pt-8 pb-4">
+<button class="font-sans font-bold text-lg px-8 py-4 bg-primary text-background-dark dark:text-background-dark rounded-lg hover:bg-primary/90 transition-colors">Submit Registration</button>
+<button class="font-sans text-base text-accent hover:underline" type="reset">Reset Form</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
