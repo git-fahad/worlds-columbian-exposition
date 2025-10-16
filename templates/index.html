@@ -30,9 +30,9 @@
                         <div class="hidden md:flex flex-1 justify-end gap-8">
                             <nav class="flex items-center gap-9">
                                 <a class="text-sm font-medium leading-normal hover:text-gold" href="#">Exhibits</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/events.html">Map & Schedule</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/tickets.html">Tickets & Lodging</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="/business-registration.html">For Businesses</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('events') }}">Map & Schedule</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('tickets') }}">Tickets & Lodging</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('business_registration') }}">For Businesses</a>
                                 <a class="text-sm font-medium leading-normal hover:text-gold" href="#">News</a>
                             </nav>
                         </div>
@@ -47,7 +47,7 @@
                         <div class="@container">
                             <div class="@[480px]:p-4">
                                 <div class="hero-section flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
-                                     style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 128, 0.6) 100%), url("/static/images/hero-white-city.jpg");'>
+                                     style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 128, 0.6) 100%), url("https://cdn.theatlantic.com/media/img/photo/2024/10/1893-chicago-worlds-fair-1/a01_G-88811585-1/original.jpg");'>
                                     <div class="flex flex-col gap-2 text-center">
                                         <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl font-display">
                                             Welcome to the World's Columbian Exposition
@@ -73,7 +73,7 @@
                         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
                             <div class="flex flex-col gap-3 pb-3">
                                 <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                                     style='background-image: url("/static/images/ferris-wheel.jpg");'></div>
+                                     style='background-image: url("https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagoferriswheel.jpg");'></div>
                                 <div>
                                     <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Ferris Wheel</p>
                                     <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">A marvel of engineering, offering breathtaking views of the fairgrounds.</p>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="flex flex-col gap-3 pb-3">
                                 <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                                     style='background-image: url("/static/images/palace-fine-arts.jpg");'></div>
+                                     style='background-image: url("https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagotheartpalace.jpg");'></div>
                                 <div>
                                     <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Palace of Fine Arts</p>
                                     <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">Home to a vast collection of art from around the world.</p>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="flex flex-col gap-3 pb-3">
                                 <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-                                     style='background-image: url("/static/images/electricity-building.jpg");'></div>
+                                     style='background-image: url("https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagoelectricitybuilding.jpg");'></div>
                                 <div>
                                     <p class="text-black dark:text-white text-base font-medium leading-normal font-display">The Electricity Building</p>
                                     <p class="text-black/70 dark:text-white/70 text-sm font-normal leading-normal">A dazzling display of the latest electrical innovations.</p>
