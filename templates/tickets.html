@@ -1,210 +1,470 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chicago World's Fair 1893 - Visitor Information</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#000080", // Deep navy blue
-                        "secondary": "#BDB76B", // Muted gold/brass
-                        "background-light": "#F5F5DC", // Off-white/cream
-                        "background-dark": "#101a22",
-                        "text-light": "#111518",
-                        "text-dark": "#f6f7f8",
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chicago World's Fair 1893 - Visitor Information</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000080", // Deep navy blue
+              secondary: "#BDB76B", // Muted gold/brass
+              "background-light": "#F5F5DC", // Off-white/cream
+              "background-dark": "#101a22",
+              "text-light": "#111518",
+              "text-dark": "#f6f7f8",
             },
-        }
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        body {
-            font-family: 'Newsreader', serif;
-        }
+    <style>
+      body {
+        font-family: "Newsreader", serif;
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/20 px-4 sm:px-10 py-3">
-<div class="flex items-center gap-4 text-primary">
-<div class="size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
-</svg>
-</div>
-<h2 class="text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display">Chicago World's Fair 1893</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-9">
-<a class="text-primary dark:text-white text-sm font-medium leading-normal font-display" href="#">Exhibits</a>
-<a class="text-primary dark:text-white text-sm font-medium leading-normal font-display" href="#">Events</a>
-<a class="text-primary dark:text-white text-sm font-medium leading-normal font-display" href="#">Visitor Information</a>
-<a class="text-primary dark:text-white text-sm font-medium leading-normal font-display" href="#">About</a>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] font-display">
-<span class="truncate">Buy Tickets</span>
-</button>
-</div>
-</header>
-<main class="flex-grow">
-<div class="@container mt-5">
-<div class="@[480px]:px-4 @[480px]:py-3">
-<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80" data-alt="Sepia-toned photograph of the Grand Court of Honor at the 1893 Chicago World's Fair, showcasing the 'White City' architecture." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDs-ezE2ETfGDd8CR-Y12AZJ4RQjZO7r8BXQ8RdhNbyFB004Uibrae-1lGYgWV8cmvkbxaN-fxkzX-y0n2Ha9LIxSBWJHLP37Gjzeh1l9aAHR9R3MXicuRw31TQaJwI0AGl88uY-s57ABqLQ3CPnaCs6scnjtRCwlQyn2gM-TpKy7KTaKwWTmgHnjLZkWUnwKwPcQdmBqc3-80MBfPuRCvaCap6OeRWgPOCU4QZLq8Fiu_eNWPd6WQH42d8D_bme60odkD2Sx74nzc"); filter: sepia(0.6);'>
-<div class="flex p-6">
-<p class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight">Plan Your Visit</p>
-</div>
-</div>
-</div>
-</div>
-<section id="tickets">
-<h2 class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display">Tickets</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 py-3">
-<div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-6">
-<div class="flex flex-col gap-1">
-<h3 class="text-primary dark:text-white text-xl font-bold leading-tight font-display">General Admission</h3>
-<p class="flex items-baseline gap-1 text-text-light dark:text-text-dark">
-<span class="text-4xl font-black leading-tight tracking-[-0.033em] font-display">$0.50</span>
-<span class="text-base font-bold leading-tight font-display">per day</span>
-</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display">
-<span class="truncate">Purchase Ticket</span>
-</button>
-<div class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> Single day access
-                                        </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> Entry to all pavilions
-                                        </div>
-</div>
-</div>
-<div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-secondary bg-background-light dark:bg-background-dark p-6">
-<div class="flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<h3 class="text-primary dark:text-white text-xl font-bold leading-tight font-display">Season Pass</h3>
-<p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-full bg-primary px-3 py-[3px] text-center font-sans">Best Value</p>
-</div>
-<p class="flex items-baseline gap-1 text-text-light dark:text-text-dark">
-<span class="text-4xl font-black leading-tight tracking-[-0.033em] font-display">$10.00</span>
-<span class="text-base font-bold leading-tight font-display">full season</span>
-</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display">
-<span class="truncate">Purchase Pass</span>
-</button>
-<div class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> Unlimited access for the entire fair duration
-                                        </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> Exclusive previews &amp; special events
-                                        </div>
-</div>
-</div>
-<div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-6">
-<div class="flex flex-col gap-1">
-<h3 class="text-primary dark:text-white text-xl font-bold leading-tight font-display">Group Rate</h3>
-<p class="flex items-baseline gap-1 text-text-light dark:text-text-dark">
-<span class="text-4xl font-black leading-tight tracking-[-0.033em] font-display">$0.40</span>
-<span class="text-base font-bold leading-tight font-display">per person</span>
-</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display">
-<span class="truncate">Inquire Now</span>
-</button>
-<div class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> For parties of 20 or more
-                                        </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-base">check_circle</span> Guided tour options available
-                                        </div>
-</div>
-</div>
-</div>
-</section>
-<section class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 px-4" id="hours-guidelines">
-<div>
-<h2 class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 font-display">Fair Hours</h2>
-<div class="p-6 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark">
-<p class="mb-2"><strong>General Fairgrounds:</strong> 9:00 AM to 9:00 PM Daily</p>
-<p class="mb-2"><strong>Exhibit Pavilions:</strong> 10:00 AM to 6:00 PM Daily</p>
-<p><strong>Midway Plaisance:</strong> 10:00 AM to 10:00 PM Daily</p>
-</div>
-</div>
-<div>
-<h2 class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 font-display">Visitor Guidelines</h2>
-<div class="p-6 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark space-y-2">
-<p>Please observe decorum appropriate to this grand occasion. Prohibited items include outside food and beverages, animals (except service animals), and large parcels. First aid stations are clearly marked on the map.</p>
-</div>
-</div>
-</section>
-<section class="mt-10 px-4" id="faq">
-<h2 class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 font-display">Frequently Asked Questions</h2>
-<div class="space-y-4 font-sans text-text-light dark:text-text-dark">
-<details class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4">
-<summary class="flex cursor-pointer items-center justify-between">
-<span class="font-bold text-primary dark:text-white">How do I get to the fair?</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-</summary>
-<p class="mt-2 text-sm">The Illinois Central Railroad provides direct service to the fairgrounds. Streetcars and horse-drawn omnibuses are also available from all parts of Chicago. Water taxis operate along the lakefront for a scenic journey.</p>
-</details>
-<details class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4">
-<summary class="flex cursor-pointer items-center justify-between">
-<span class="font-bold text-primary dark:text-white">Is the fair accessible for persons with disabilities?</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-</summary>
-<p class="mt-2 text-sm">Yes, rolling chairs are available for rental for visitors requiring mobility assistance. Most major walkways and buildings are designed to be accessible.</p>
-</details>
-<details class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4">
-<summary class="flex cursor-pointer items-center justify-between">
-<span class="font-bold text-primary dark:text-white">What dining options are available?</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-</summary>
-<p class="mt-2 text-sm">A wide variety of restaurants, cafes, and refreshment stands are located throughout the fairgrounds, offering cuisine from around the world to suit every taste and budget.</p>
-</details>
-<details class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4">
-<summary class="flex cursor-pointer items-center justify-between">
-<span class="font-bold text-primary dark:text-white">Are photographs permitted?</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-</summary>
-<p class="mt-2 text-sm">Personal photography for non-commercial use is permitted. However, the use of large tripods may be restricted in crowded areas or certain exhibits. Please be considerate of other visitors.</p>
-</details>
-</div>
-</section>
-</main>
-<footer class="mt-16 border-t border-solid border-primary/20 py-8 px-4 sm:px-10">
-<div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
-<p class="text-sm text-primary dark:text-white font-sans">© 1893 World's Columbian Exposition. All Rights Reserved.</p>
-<div class="flex items-center gap-6">
-<a class="text-sm text-primary dark:text-white font-medium hover:underline font-sans" href="#">Map</a>
-<a class="text-sm text-primary dark:text-white font-medium hover:underline font-sans" href="#">Contact</a>
-<a class="text-sm text-primary dark:text-white font-medium hover:underline font-sans flex items-center gap-1" href="#"><span class="material-symbols-outlined text-base">print</span> Print Page</a>
-</div>
-</div>
-</footer>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/20 px-4 sm:px-10 py-3"
+            >
+              <a href="{{ url_for('main.index') }}" class="flex items-center gap-4 text-primary hover:text-secondary transition-colors">
+                <div class="size-6">
+                  <svg
+                    fill="currentColor"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display"
+                >
+                  Chicago World's Fair 1893
+                </h2>
+              </a>
+              <div class="hidden md:flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-9">
+                  <a
+                    class="text-primary dark:text-white text-sm font-medium leading-normal font-display"
+                    href="{{ url_for('main.exhibits') }}"
+                    >Exhibits</a
+                  >
+                  <a
+                    class="text-primary dark:text-white text-sm font-medium leading-normal font-display"
+                    href="{{ url_for('main.events') }}"
+                    >Events</a
+                  >
+                  <a
+                    class="text-primary dark:text-white text-sm font-medium leading-normal font-display"
+                    href="{{ url_for('main.tickets') }}"
+                    >Visitor Information</a
+                  >
+                  <a
+                    class="text-primary dark:text-white text-sm font-medium leading-normal font-display"
+                    href="{{ url_for('main.about') }}"
+                    >About</a
+                  >
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] font-display"
+                >
+                  <span class="truncate">Buy Tickets</span>
+                </button>
+              </div>
+            </header>
+            <main class="flex-grow">
+              <div class="@container mt-5">
+                <div class="@[480px]:px-4 @[480px]:py-3">
+                  <div
+                    class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                    data-alt="Sepia-toned photograph of the Grand Court of Honor at the 1893 Chicago World's Fair, showcasing the 'White City' architecture."
+                    style="
+                      background-image: linear-gradient(
+                          0deg,
+                          rgba(0, 0, 0, 0.6) 0%,
+                          rgba(0, 0, 0, 0) 40%
+                        ),
+                        url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs-ezE2ETfGDd8CR-Y12AZJ4RQjZO7r8BXQ8RdhNbyFB004Uibrae-1lGYgWV8cmvkbxaN-fxkzX-y0n2Ha9LIxSBWJHLP37Gjzeh1l9aAHR9R3MXicuRw31TQaJwI0AGl88uY-s57ABqLQ3CPnaCs6scnjtRCwlQyn2gM-TpKy7KTaKwWTmgHnjLZkWUnwKwPcQdmBqc3-80MBfPuRCvaCap6OeRWgPOCU4QZLq8Fiu_eNWPd6WQH42d8D_bme60odkD2Sx74nzc');
+                      filter: sepia(0.6);
+                    "
+                  >
+                    <div class="flex p-6">
+                      <p
+                        class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight"
+                      >
+                        Plan Your Visit
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section id="tickets">
+                <h2
+                  class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10 font-display"
+                >
+                  Tickets
+                </h2>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 py-3"
+                >
+                  <div
+                    class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-6"
+                  >
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="text-primary dark:text-white text-xl font-bold leading-tight font-display"
+                      >
+                        General Admission
+                      </h3>
+                      <p
+                        class="flex items-baseline gap-1 text-text-light dark:text-text-dark"
+                      >
+                        <span
+                          class="text-4xl font-black leading-tight tracking-[-0.033em] font-display"
+                          >$0.50</span
+                        >
+                        <span
+                          class="text-base font-bold leading-tight font-display"
+                          >per day</span
+                        >
+                      </p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display"
+                    >
+                      <span class="truncate">Purchase Ticket</span>
+                    </button>
+                    <div
+                      class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        Single day access
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        Entry to all pavilions
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-secondary bg-background-light dark:bg-background-dark p-6"
+                  >
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between">
+                        <h3
+                          class="text-primary dark:text-white text-xl font-bold leading-tight font-display"
+                        >
+                          Season Pass
+                        </h3>
+                        <p
+                          class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-full bg-primary px-3 py-[3px] text-center font-sans"
+                        >
+                          Best Value
+                        </p>
+                      </div>
+                      <p
+                        class="flex items-baseline gap-1 text-text-light dark:text-text-dark"
+                      >
+                        <span
+                          class="text-4xl font-black leading-tight tracking-[-0.033em] font-display"
+                          >$10.00</span
+                        >
+                        <span
+                          class="text-base font-bold leading-tight font-display"
+                          >full season</span
+                        >
+                      </p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display"
+                    >
+                      <span class="truncate">Purchase Pass</span>
+                    </button>
+                    <div
+                      class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        Unlimited access for the entire fair duration
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        Exclusive previews &amp; special events
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-6"
+                  >
+                    <div class="flex flex-col gap-1">
+                      <h3
+                        class="text-primary dark:text-white text-xl font-bold leading-tight font-display"
+                      >
+                        Group Rate
+                      </h3>
+                      <p
+                        class="flex items-baseline gap-1 text-text-light dark:text-text-dark"
+                      >
+                        <span
+                          class="text-4xl font-black leading-tight tracking-[-0.033em] font-display"
+                          >$0.40</span
+                        >
+                        <span
+                          class="text-base font-bold leading-tight font-display"
+                          >per person</span
+                        >
+                      </p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-secondary text-primary text-sm font-bold leading-normal tracking-[0.015em] font-display"
+                    >
+                      <span class="truncate">Inquire Now</span>
+                    </button>
+                    <div
+                      class="flex flex-col gap-2 text-sm text-text-light dark:text-text-dark font-sans"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        For parties of 20 or more
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-primary text-base"
+                          >check_circle</span
+                        >
+                        Guided tour options available
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section
+                class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 px-4"
+                id="hours-guidelines"
+              >
+                <div>
+                  <h2
+                    class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 font-display"
+                  >
+                    Fair Hours
+                  </h2>
+                  <div
+                    class="p-6 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark"
+                  >
+                    <p class="mb-2">
+                      <strong>General Fairgrounds:</strong> 9:00 AM to 9:00 PM
+                      Daily
+                    </p>
+                    <p class="mb-2">
+                      <strong>Exhibit Pavilions:</strong> 10:00 AM to 6:00 PM
+                      Daily
+                    </p>
+                    <p>
+                      <strong>Midway Plaisance:</strong> 10:00 AM to 10:00 PM
+                      Daily
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h2
+                    class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 font-display"
+                  >
+                    Visitor Guidelines
+                  </h2>
+                  <div
+                    class="p-6 rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark space-y-2"
+                  >
+                    <p>
+                      Please observe decorum appropriate to this grand occasion.
+                      Prohibited items include outside food and beverages,
+                      animals (except service animals), and large parcels. First
+                      aid stations are clearly marked on the map.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section class="mt-10 px-4" id="faq">
+                <h2
+                  class="text-primary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 font-display"
+                >
+                  Frequently Asked Questions
+                </h2>
+                <div
+                  class="space-y-4 font-sans text-text-light dark:text-text-dark"
+                >
+                  <details
+                    class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4"
+                  >
+                    <summary
+                      class="flex cursor-pointer items-center justify-between"
+                    >
+                      <span class="font-bold text-primary dark:text-white"
+                        >How do I get to the fair?</span
+                      >
+                      <span
+                        class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-sm">
+                      The Illinois Central Railroad provides direct service to
+                      the fairgrounds. Streetcars and horse-drawn omnibuses are
+                      also available from all parts of Chicago. Water taxis
+                      operate along the lakefront for a scenic journey.
+                    </p>
+                  </details>
+                  <details
+                    class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4"
+                  >
+                    <summary
+                      class="flex cursor-pointer items-center justify-between"
+                    >
+                      <span class="font-bold text-primary dark:text-white"
+                        >Is the fair accessible for persons with
+                        disabilities?</span
+                      >
+                      <span
+                        class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-sm">
+                      Yes, rolling chairs are available for rental for visitors
+                      requiring mobility assistance. Most major walkways and
+                      buildings are designed to be accessible.
+                    </p>
+                  </details>
+                  <details
+                    class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4"
+                  >
+                    <summary
+                      class="flex cursor-pointer items-center justify-between"
+                    >
+                      <span class="font-bold text-primary dark:text-white"
+                        >What dining options are available?</span
+                      >
+                      <span
+                        class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-sm">
+                      A wide variety of restaurants, cafes, and refreshment
+                      stands are located throughout the fairgrounds, offering
+                      cuisine from around the world to suit every taste and
+                      budget.
+                    </p>
+                  </details>
+                  <details
+                    class="group rounded-lg border border-solid border-primary/20 bg-background-light dark:bg-background-dark p-4"
+                  >
+                    <summary
+                      class="flex cursor-pointer items-center justify-between"
+                    >
+                      <span class="font-bold text-primary dark:text-white"
+                        >Are photographs permitted?</span
+                      >
+                      <span
+                        class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                        >expand_more</span
+                      >
+                    </summary>
+                    <p class="mt-2 text-sm">
+                      Personal photography for non-commercial use is permitted.
+                      However, the use of large tripods may be restricted in
+                      crowded areas or certain exhibits. Please be considerate
+                      of other visitors.
+                    </p>
+                  </details>
+                </div>
+              </section>
+            </main>
+            <footer
+              class="mt-16 border-t border-solid border-primary/20 py-8 px-4 sm:px-10"
+            >
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4"
+              >
+                <p class="text-sm text-primary dark:text-white font-sans">
+                  © 1893 World's Columbian Exposition. All Rights Reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                  <a
+                    class="text-sm text-primary dark:text-white font-medium hover:underline font-sans"
+                    href="{{ url_for('main.exhibits') }}"
+                    >Map</a
+                  >
+                  <a
+                    class="text-sm text-primary dark:text-white font-medium hover:underline font-sans"
+                    href="{{ url_for('main.contact') }}"
+                    >Contact</a
+                  >
+                  <a
+                    class="text-sm text-primary dark:text-white font-medium hover:underline font-sans flex items-center gap-1"
+                    href="#"
+                    ><span class="material-symbols-outlined text-base"
+                      >print</span
+                    >
+                    Print Page</a
+                  >
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

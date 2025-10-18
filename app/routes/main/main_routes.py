@@ -32,3 +32,28 @@ def tickets():
 def about():
     """About page route"""
     return BaseController.render_page('about.html')
+
+@main_bp.route('/news')
+def news():
+    """News page route"""
+    return BaseController.render_page('news.html')
+
+@main_bp.route('/history')
+def history():
+    """History page route"""
+    return BaseController.render_page('history.html')
+
+@main_bp.route('/organizers')
+def organizers():
+    """Organizers page route"""
+    return BaseController.render_page('organizers.html')
+
+@main_bp.route('/sponsors')
+def sponsors():
+    """Sponsors page route"""
+    return BaseController.render_page('sponsors.html')
+
+@main_bp.route('/contact')
+def contact():
+    """Contact page route"""
+    return BaseController.render_page('contact.html')

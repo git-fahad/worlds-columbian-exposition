@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago World's Fair - History</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Tailwind CSS CDN (for development) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#001f3f",
+                        accent: "#daa520",
+                        secondary: "#fdf6e3",
+                        "background-light": "#fdf6e3",
+                        "background-dark": "#101a22",
+                        "text-light": "#111518",
+                        "text-dark": "#fdf6e3",
+                    },
+                    fontFamily: {
+                        display: ["Newsreader", "serif"],
+                        sans: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <!-- Header -->
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3">
+                        <a href="{{ url_for('main.index') }}" class="flex items-center gap-4 text-black dark:text-white hover:text-gold transition-colors">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold leading-tight font-display">
+                                Chicago World's Fair
+                            </h2>
+                        </a>
+                        <div class="hidden md:flex flex-1 justify-end gap-8">
+                            <nav class="flex items-center gap-9">
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.events') }}">Map & Schedule</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets & Lodging</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('business.business_registration') }}">For Businesses</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.news') }}">News</a>
+                            </nav>
+                        </div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <main class="flex-grow">
+                        <!-- Hero Section -->
+                        <div class="@container mt-5">
+                            <div class="@[480px]:px-4 @[480px]:py-3">
+                                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfXiIcPnnDqYKwOxfRC7yQsEsPbitJrWjFW-goRI0n3uEwIXCqqpR74VAl2tOUPWruKpmX_IM_HYXLcwdWCJdeCOK7CL-cNluhU0ahuZUqwLgUVsJEEn6rZqICQ30DAmw9cWcIuGRfWi9C9uaqO_kXng3fuW4K0Pxv1kTdOwq1qdAoJR8P0t190a4ac-034mNzUl0nMUbaFVq-HDpKm1Ks4GCJvmDbWy8XgqruHf7OllsmPcYn9UKF_4nXLe6LK7BXQ5eg-t1ltI0');">
+                                    <div class="flex p-6">
+                                        <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight">
+                                            History of the Fair
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Section -->
+                        <section class="mt-10 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                The Road to the White City
+                            </h2>
+                            
+                            <div class="space-y-8">
+                                <!-- Timeline Item 1 -->
+                                <div class="flex gap-6">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                                        1889
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            The Competition Begins
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400">
+                                            Congress announces a competition to select the host city for the 1893 World's Fair, 
+                                            commemorating the 400th anniversary of Columbus's discovery of America. Chicago, New York, 
+                                            Washington D.C., and St. Louis all submit proposals.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 2 -->
+                                <div class="flex gap-6">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                                        1890
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Chicago Wins the Bid
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400">
+                                            After intense lobbying and a $10 million fundraising campaign led by Chicago's business elite, 
+                                            Congress awards the fair to Chicago. The city pledges to transform Jackson Park into the 
+                                            most magnificent exposition the world has ever seen.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 3 -->
+                                <div class="flex gap-6">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                                        1891
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            The Master Plan Takes Shape
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400">
+                                            Daniel Burnham is appointed Director of Works, and Frederick Law Olmsted designs the landscape. 
+                                            The "White City" concept emerges, featuring neoclassical architecture and a grand Court of Honor 
+                                            surrounding the Grand Basin.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 4 -->
+                                <div class="flex gap-6">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                                        1892
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Construction Begins
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400">
+                                            Thousands of workers begin the monumental task of transforming Jackson Park. The Ferris Wheel, 
+                                            designed by George Washington Gale Ferris Jr., is approved as the fair's centerpiece attraction. 
+                                            The Midway Plaisance is developed as an entertainment district.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 5 -->
+                                <div class="flex gap-6">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                                        1893
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            The Fair Opens
+                                        </h3>
+                                        <p class="text-gray-600 dark:text-gray-400">
+                                            On May 1st, President Grover Cleveland officially opens the World's Columbian Exposition. 
+                                            The "White City" dazzles visitors with its electric lights, innovative exhibits, and 
+                                            architectural grandeur. The fair runs for six months, welcoming over 27 million visitors.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Key Figures Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Visionaries and Leaders
+                            </h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                    <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">
+                                        Daniel Burnham
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                        As Director of Works, Burnham orchestrated the construction of the fair, coordinating 
+                                        hundreds of architects, artists, and workers. His famous quote, "Make no little plans," 
+                                        embodied the fair's ambitious vision.
+                                    </p>
+                                    <div class="flex items-center gap-2 text-sm text-accent">
+                                        <span class="material-symbols-outlined">person</span>
+                                        Director of Works
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                    <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">
+                                        Frederick Law Olmsted
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                        The renowned landscape architect designed the fairgrounds, creating a harmonious balance 
+                                        between grand architecture and natural beauty with his lagoons, wooded islands, and 
+                                        carefully planned vistas.
+                                    </p>
+                                    <div class="flex items-center gap-2 text-sm text-accent">
+                                        <span class="material-symbols-outlined">park</span>
+                                        Landscape Architect
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                    <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">
+                                        Bertha Palmer
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                        As President of the Board of Lady Managers, Palmer championed women's contributions to 
+                                        the fair, overseeing the Woman's Building and ensuring female representation in the 
+                                        exposition's planning and execution.
+                                    </p>
+                                    <div class="flex items-center gap-2 text-sm text-accent">
+                                        <span class="material-symbols-outlined">group</span>
+                                        President, Board of Lady Managers
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                    <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">
+                                        George Washington Gale Ferris Jr.
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                        The engineer who designed the iconic Ferris Wheel, which became the fair's most famous 
+                                        attraction. His 264-foot wheel could carry over 2,000 passengers and offered 
+                                        breathtaking views of the White City.
+                                    </p>
+                                    <div class="flex items-center gap-2 text-sm text-accent">
+                                        <span class="material-symbols-outlined">engineering</span>
+                                        Ferris Wheel Designer
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Legacy Section -->
+                        <section class="mt-16 px-4 mb-10">
+                            <div class="bg-primary text-white rounded-lg p-8">
+                                <h2 class="text-2xl font-bold mb-4 font-display">The Fair's Enduring Legacy</h2>
+                                <p class="mb-6 text-lg">
+                                    The World's Columbian Exposition not only showcased American innovation and culture but also 
+                                    left an indelible mark on the nation's consciousness. The fair introduced millions to new 
+                                    technologies, artistic movements, and cultural perspectives that would shape the coming century.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">27M+</div>
+                                        <div class="text-sm opacity-90">Total Visitors</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">46</div>
+                                        <div class="text-sm opacity-90">Nations Represented</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">200+</div>
+                                        <div class="text-sm opacity-90">Buildings Constructed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <!-- Footer -->
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.history') }}">History of the Fair</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.organizers') }}">Organizers</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.sponsors') }}">Sponsors</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.news') }}">Press</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.contact') }}">Contact</a>
+                        </div>
+                        <p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">
+                            © 1893 World's Columbian Exposition
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

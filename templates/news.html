@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicago World's Fair - News & Updates</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <!-- Tailwind CSS CDN (for development) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#001f3f",
+              accent: "#daa520",
+              secondary: "#fdf6e3",
+              "background-light": "#fdf6e3",
+              "background-dark": "#101a22",
+              "text-light": "#111518",
+              "text-dark": "#fdf6e3",
+            },
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-sans">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <!-- Header -->
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3"
+            >
+              <a href="{{ url_for('main.index') }}" class="flex items-center gap-4 text-black dark:text-white hover:text-gold transition-colors">
+                <div class="size-6">
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold leading-tight font-display">
+                  Chicago World's Fair
+                </h2>
+              </a>
+              <div class="hidden md:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.exhibits') }}"
+                    >Exhibits</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.events') }}"
+                    >Map & Schedule</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.tickets') }}"
+                    >Tickets & Lodging</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('business.business_registration') }}"
+                    >For Businesses</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal text-gold"
+                    href="{{ url_for('main.news') }}"
+                    >News</a
+                  >
+                </nav>
+              </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="flex-grow">
+              <!-- Hero Section -->
+              <div class="@container mt-5">
+                <div class="@[480px]:px-4 @[480px]:py-3">
+                  <div
+                    class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                    style="
+                      background-image: linear-gradient(
+                          0deg,
+                          rgba(0, 0, 0, 0.6) 0%,
+                          rgba(0, 0, 0, 0) 40%
+                        ),
+                        url('https://cdn.theatlantic.com/media/img/photo/2024/10/1893-chicago-worlds-fair-1/a01_G-88811585-1/original.jpg');
+                    "
+                  >
+                    <div class="flex p-6">
+                      <h1
+                        class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight"
+                      >
+                        News & Updates
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Latest News Section -->
+              <section class="mt-10 px-4">
+                <h2
+                  class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display"
+                >
+                  Latest News
+                </h2>
+
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                  <!-- News Article 1 -->
+                  <article
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagoferriswheel.jpg');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs text-gray-500 dark:text-gray-400"
+                          >October 26, 1893</span
+                        >
+                        <span
+                          class="text-xs bg-accent text-primary px-2 py-1 rounded-full"
+                          >Breaking</span
+                        >
+                      </div>
+                      <h3
+                        class="text-lg font-bold text-black dark:text-white mb-2 font-display"
+                      >
+                        Ferris Wheel Sets New Attendance Record
+                      </h3>
+                      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        The magnificent Ferris Wheel has welcomed over 2.5
+                        million visitors since opening, setting a new record for
+                        fair attractions.
+                      </p>
+                      <a
+                        href="#"
+                        class="text-accent hover:text-primary font-medium text-sm"
+                        >Read More →</a
+                      >
+                    </div>
+                  </article>
+
+                  <!-- News Article 2 -->
+                  <article
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagotheartpalace.jpg');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs text-gray-500 dark:text-gray-400"
+                          >October 24, 1893</span
+                        >
+                        <span
+                          class="text-xs bg-primary text-white px-2 py-1 rounded-full"
+                          >Art</span
+                        >
+                      </div>
+                      <h3
+                        class="text-lg font-bold text-black dark:text-white mb-2 font-display"
+                      >
+                        Palace of Fine Arts Announces New Exhibit
+                      </h3>
+                      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        A stunning collection of European masterpieces has been
+                        added to the Palace of Fine Arts, featuring works never
+                        before seen in America.
+                      </p>
+                      <a
+                        href="#"
+                        class="text-accent hover:text-primary font-medium text-sm"
+                        >Read More →</a
+                      >
+                    </div>
+                  </article>
+
+                  <!-- News Article 3 -->
+                  <article
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://chicagology.com/wp-content/themes/revolution-20/columbian/picturesquechicagoelectricitybuilding.jpg');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs text-gray-500 dark:text-gray-400"
+                          >October 22, 1893</span
+                        >
+                        <span
+                          class="text-xs bg-green-500 text-white px-2 py-1 rounded-full"
+                          >Technology</span
+                        >
+                      </div>
+                      <h3
+                        class="text-lg font-bold text-black dark:text-white mb-2 font-display"
+                      >
+                        Electricity Building Showcases Future
+                      </h3>
+                      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        The Electricity Building continues to amaze visitors
+                        with demonstrations of alternating current and other
+                        electrical innovations.
+                      </p>
+                      <a
+                        href="#"
+                        class="text-accent hover:text-primary font-medium text-sm"
+                        >Read More →</a
+                      >
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <!-- Press Releases Section -->
+              <section class="mt-16 px-4">
+                <h2
+                  class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display"
+                >
+                  Press Releases
+                </h2>
+
+                <div class="space-y-6">
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <h3
+                        class="text-xl font-bold text-black dark:text-white font-display"
+                      >
+                        World's Fair Reaches 25 Million Visitors Milestone
+                      </h3>
+                      <span class="text-sm text-gray-500 dark:text-gray-400"
+                        >October 20, 1893</span
+                      >
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                      The World's Columbian Exposition has officially welcomed
+                      its 25 millionth visitor, marking a historic achievement
+                      in the annals of world's fairs...
+                    </p>
+                    <a
+                      href="#"
+                      class="text-accent hover:text-primary font-medium"
+                      >Download Full Release</a
+                    >
+                  </div>
+
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <h3
+                        class="text-xl font-bold text-black dark:text-white font-display"
+                      >
+                        International Delegations Announce Participation
+                      </h3>
+                      <span class="text-sm text-gray-500 dark:text-gray-400"
+                        >October 18, 1893</span
+                      >
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                      Representatives from 46 nations have confirmed their
+                      participation in the Exposition, bringing the finest
+                      examples of art, culture, and innovation from around the
+                      globe...
+                    </p>
+                    <a
+                      href="#"
+                      class="text-accent hover:text-primary font-medium"
+                      >Download Full Release</a
+                    >
+                  </div>
+                </div>
+              </section>
+
+              <!-- Media Contact Section -->
+              <section class="mt-16 px-4 mb-10">
+                <div class="bg-primary text-white rounded-lg p-8">
+                  <h2 class="text-2xl font-bold mb-4 font-display">
+                    Media Contact
+                  </h2>
+                  <p class="mb-6">
+                    For press inquiries, interviews, or media access to the
+                    World's Columbian Exposition, please contact our press
+                    office.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 class="font-bold mb-2">Press Office</h3>
+                      <p class="text-sm opacity-90">Administration Building</p>
+                      <p class="text-sm opacity-90">
+                        World's Columbian Exposition
+                      </p>
+                      <p class="text-sm opacity-90">
+                        Jackson Park, Chicago, Illinois
+                      </p>
+                    </div>
+                    <div>
+                      <h3 class="font-bold mb-2">Contact Information</h3>
+                      <p class="text-sm opacity-90">Phone: (312) 555-FAIR</p>
+                      <p class="text-sm opacity-90">
+                        Telegraph: WORLD FAIR CHICAGO
+                      </p>
+                      <p class="text-sm opacity-90">
+                        Office Hours: 9:00 AM - 5:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </main>
+
+            <!-- Footer -->
+            <footer
+              class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10"
+            >
+              <div
+                class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around"
+              >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.history') }}"
+                  >History of the Fair</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.organizers') }}"
+                  >Organizers</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.sponsors') }}"
+                  >Sponsors</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.news') }}"
+                  >Press</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.contact') }}"
+                  >Contact</a
+                >
+              </div>
+              <p
+                class="text-black/60 dark:text-white/60 text-base font-normal leading-normal"
+              >
+                © 1893 World's Columbian Exposition
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>

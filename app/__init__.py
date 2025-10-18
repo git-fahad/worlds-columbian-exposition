@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Initialize extensions
+
 db = SQLAlchemy()
 
 def create_app():
@@ -15,15 +15,15 @@ def create_app():
                 template_folder='../templates',
                 static_folder='../static')
     
-    # Configuration
+
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-secret-key-here')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://localhost/chicago_fair')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
-    # Initialize extensions with app
+  
     db.init_app(app)
     
-    # Import models to ensure they are registered with SQLAlchemy
+   
     from app.models import Visitor, Country, Business
     
     # Register blueprints
