@@ -58,8 +58,8 @@
               class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 md:px-10 py-3"
             >
               <div class="flex items-center gap-8">
-                <div
-                  class="flex items-center gap-4 text-gray-900 dark:text-white"
+                <a href="{{ url_for('main.index') }}"
+                  class="flex items-center gap-4 text-gray-900 dark:text-white hover:text-primary transition-colors"
                 >
                   <div class="size-6">
                     <svg
@@ -77,7 +77,7 @@
                   >
                     Chicago World's Fair
                   </h2>
-                </div>
+                </a>
                 <nav class="hidden md:flex items-center gap-9">
                   <a
                     class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary"
