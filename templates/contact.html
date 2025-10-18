@@ -1,348 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chicago World's Fair - Contact</title>
-    
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
-    
+    <link rel="stylesheet" href="/static/css/style.css" />
+
     <!-- Tailwind CSS CDN (for development) -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+
     <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#001f3f",
-                        accent: "#daa520",
-                        secondary: "#fdf6e3",
-                        "background-light": "#fdf6e3",
-                        "background-dark": "#101a22",
-                        "text-light": "#111518",
-                        "text-dark": "#fdf6e3",
-                    },
-                    fontFamily: {
-                        display: ["Newsreader", "serif"],
-                        sans: ["Lato", "sans-serif"],
-                    },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#001f3f",
+              accent: "#daa520",
+              secondary: "#fdf6e3",
+              "background-light": "#fdf6e3",
+              "background-dark": "#101a22",
+              "text-light": "#111518",
+              "text-dark": "#fdf6e3",
             },
-        };
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-sans">
-    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-        <div class="layout-container flex h-full grow flex-col">
-            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
-                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <!-- Header -->
-                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3">
-                        <div class="flex items-center gap-4 text-black dark:text-white">
-                            <div class="size-6">
-                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-xl font-bold leading-tight font-display">
-                                Chicago World's Fair
-                            </h2>
-                        </div>
-                        <div class="hidden md:flex flex-1 justify-end gap-8">
-                            <nav class="flex items-center gap-9">
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.events') }}">Map & Schedule</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets & Lodging</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('business.business_registration') }}">For Businesses</a>
-                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.news') }}">News</a>
-                            </nav>
-                        </div>
-                    </header>
-
-                    <!-- Main Content -->
-                    <main class="flex-grow">
-                        <!-- Hero Section -->
-                        <div class="@container mt-5">
-                            <div class="@[480px]:px-4 @[480px]:py-3">
-                                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
-                                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3V8-Hrd9rR3sT2v0dCglBM_HhjVRHDAbRYt65X00qTZVNK2Pei8gaVBwHqcw1FkDZqjERNRTi9R3WjuasXWvpX7EX3cK_eyYjMeEUobCjyzjNfKVjPT9ywTyrlK-JJSHFgzcOx6-qmBIIp2si8CnKFA7kZmPZfeMxMnO6pUYyQ4E-ZcDYx1hlEqPpSCwPc8lgCEsoqINmXJfonqpkQaOON5lXuXyTXHHAYduUp8vdMQouq1sq9bJHgi6ybGjH2ThmwaZPirMCp-M');">
-                                    <div class="flex p-6">
-                                        <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight">
-                                            Contact Us
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Contact Information Section -->
-                        <section class="mt-10 px-4">
-                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
-                                Get in Touch
-                            </h2>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <!-- Main Office -->
-                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
-                                    <div class="flex items-center gap-4 mb-4">
-                                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
-                                            <span class="material-symbols-outlined">business</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
-                                                Main Office
-                                            </h3>
-                                            <p class="text-primary font-medium">Administration Building</p>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">location_on</span>
-                                            <span>Jackson Park, Chicago, Illinois</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">phone</span>
-                                            <span>(312) 555-FAIR</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">schedule</span>
-                                            <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Press Office -->
-                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
-                                    <div class="flex items-center gap-4 mb-4">
-                                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
-                                            <span class="material-symbols-outlined">newspaper</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
-                                                Press Office
-                                            </h3>
-                                            <p class="text-primary font-medium">Media Relations</p>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">location_on</span>
-                                            <span>Administration Building, Room 201</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">phone</span>
-                                            <span>(312) 555-PRESS</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">schedule</span>
-                                            <span>Daily: 8:00 AM - 6:00 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Visitor Services -->
-                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
-                                    <div class="flex items-center gap-4 mb-4">
-                                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
-                                            <span class="material-symbols-outlined">support_agent</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
-                                                Visitor Services
-                                            </h3>
-                                            <p class="text-primary font-medium">Customer Support</p>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">location_on</span>
-                                            <span>Main Entrance, Information Booth</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">phone</span>
-                                            <span>(312) 555-HELP</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">schedule</span>
-                                            <span>Daily: 8:00 AM - 9:00 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Business Relations -->
-                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
-                                    <div class="flex items-center gap-4 mb-4">
-                                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center">
-                                            <span class="material-symbols-outlined">handshake</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
-                                                Business Relations
-                                            </h3>
-                                            <p class="text-primary font-medium">Partnerships & Sponsorships</p>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">location_on</span>
-                                            <span>Administration Building, Room 305</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">phone</span>
-                                            <span>(312) 555-BUSINESS</span>
-                                        </div>
-                                        <div class="flex items-center gap-3">
-                                            <span class="material-symbols-outlined text-accent">schedule</span>
-                                            <span>Monday - Friday: 10:00 AM - 4:00 PM</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Contact Form Section -->
-                        <section class="mt-16 px-4">
-                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
-                                Send Us a Message
-                            </h2>
-                            
-                            <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-8">
-                                <form class="space-y-6">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label for="firstName" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                                First Name *
-                                            </label>
-                                            <input type="text" id="firstName" name="firstName" required
-                                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white">
-                                        </div>
-                                        <div>
-                                            <label for="lastName" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                                Last Name *
-                                            </label>
-                                            <input type="text" id="lastName" name="lastName" required
-                                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label for="email" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                                Email Address *
-                                            </label>
-                                            <input type="email" id="email" name="email" required
-                                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white">
-                                        </div>
-                                        <div>
-                                            <label for="phone" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                                Phone Number
-                                            </label>
-                                            <input type="tel" id="phone" name="phone"
-                                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white">
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="subject" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                            Subject *
-                                        </label>
-                                        <select id="subject" name="subject" required
-                                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white">
-                                            <option value="">Select a subject</option>
-                                            <option value="general">General Inquiry</option>
-                                            <option value="press">Press Inquiry</option>
-                                            <option value="business">Business Partnership</option>
-                                            <option value="visitor">Visitor Information</option>
-                                            <option value="complaint">Complaint</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="message" class="block text-sm font-medium text-black dark:text-white mb-2">
-                                            Message *
-                                        </label>
-                                        <textarea id="message" name="message" rows="6" required
-                                                  class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
-                                                  placeholder="Please provide details about your inquiry..."></textarea>
-                                    </div>
-                                    
-                                    <div class="flex items-center gap-3">
-                                        <input type="checkbox" id="newsletter" name="newsletter"
-                                               class="w-4 h-4 text-accent bg-gray-100 border-gray-300 rounded focus:ring-accent focus:ring-2">
-                                        <label for="newsletter" class="text-sm text-gray-600 dark:text-gray-400">
-                                            I would like to receive updates about the World's Columbian Exposition
-                                        </label>
-                                    </div>
-                                    
-                                    <button type="submit" 
-                                            class="w-full md:w-auto bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors">
-                                        Send Message
-                                    </button>
-                                </form>
-                            </div>
-                        </section>
-
-                        <!-- Emergency Contact Section -->
-                        <section class="mt-16 px-4 mb-10">
-                            <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-                                <h2 class="text-2xl font-bold text-red-800 dark:text-red-200 mb-4 font-display">
-                                    Emergency Contact
-                                </h2>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div class="text-center">
-                                        <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3">
-                                            <span class="material-symbols-outlined">local_hospital</span>
-                                        </div>
-                                        <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">Medical Emergency</h3>
-                                        <p class="text-sm text-red-600 dark:text-red-300">(312) 555-EMERGENCY</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3">
-                                            <span class="material-symbols-outlined">security</span>
-                                        </div>
-                                        <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">Security</h3>
-                                        <p class="text-sm text-red-600 dark:text-red-300">(312) 555-SECURITY</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3">
-                                            <span class="material-symbols-outlined">fire_truck</span>
-                                        </div>
-                                        <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">Fire Department</h3>
-                                        <p class="text-sm text-red-600 dark:text-red-300">(312) 555-FIRE</p>
-                                    </div>
-                                </div>
-                                <p class="text-center text-sm text-red-600 dark:text-red-300 mt-4">
-                                    <strong>Note:</strong> In case of emergency, please contact the nearest fair official or visit any information booth.
-                                </p>
-                            </div>
-                        </section>
-                    </main>
-
-                    <!-- Footer -->
-                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10">
-                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.history') }}">History of the Fair</a>
-                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.organizers') }}">Organizers</a>
-                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.sponsors') }}">Sponsors</a>
-                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.news') }}">Press</a>
-                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.contact') }}">Contact</a>
-                        </div>
-                        <p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">
-                            © 1893 World's Columbian Exposition
-                        </p>
-                    </footer>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-sans">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <!-- Header -->
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3"
+            >
+              <div class="flex items-center gap-4 text-black dark:text-white">
+                <div class="size-6">
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                    ></path>
+                  </svg>
                 </div>
-            </div>
+                <h2 class="text-xl font-bold leading-tight font-display">
+                  Chicago World's Fair
+                </h2>
+              </div>
+              <div class="hidden md:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.exhibits') }}"
+                    >Exhibits</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.events') }}"
+                    >Map & Schedule</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.tickets') }}"
+                    >Tickets & Lodging</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('business.business_registration') }}"
+                    >For Businesses</a
+                  >
+                  <a
+                    class="text-sm font-medium leading-normal hover:text-gold"
+                    href="{{ url_for('main.news') }}"
+                    >News</a
+                  >
+                </nav>
+              </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="flex-grow">
+              <!-- Hero Section -->
+              <div class="@container mt-5">
+                <div class="@[480px]:px-4 @[480px]:py-3">
+                  <div
+                    class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                    style="
+                      background-image: linear-gradient(
+                          0deg,
+                          rgba(0, 0, 0, 0.6) 0%,
+                          rgba(0, 0, 0, 0) 40%
+                        ),
+                        url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3V8-Hrd9rR3sT2v0dCglBM_HhjVRHDAbRYt65X00qTZVNK2Pei8gaVBwHqcw1FkDZqjERNRTi9R3WjuasXWvpX7EX3cK_eyYjMeEUobCjyzjNfKVjPT9ywTyrlK-JJSHFgzcOx6-qmBIIp2si8CnKFA7kZmPZfeMxMnO6pUYyQ4E-ZcDYx1hlEqPpSCwPc8lgCEsoqINmXJfonqpkQaOON5lXuXyTXHHAYduUp8vdMQouq1sq9bJHgi6ybGjH2ThmwaZPirMCp-M');
+                    "
+                  >
+                    <div class="flex p-6">
+                      <h1
+                        class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight"
+                      >
+                        Contact Us
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Information Section -->
+              <section class="mt-10 px-4">
+                <h2
+                  class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display"
+                >
+                  Get in Touch
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <!-- Main Office -->
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6"
+                  >
+                    <div class="flex items-center gap-4 mb-4">
+                      <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined">business</span>
+                      </div>
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-black dark:text-white font-display"
+                        >
+                          Main Office
+                        </h3>
+                        <p class="text-primary font-medium">
+                          Administration Building
+                        </p>
+                      </div>
+                    </div>
+                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >location_on</span
+                        >
+                        <span>Jackson Park, Chicago, Illinois</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >phone</span
+                        >
+                        <span>(312) 555-FAIR</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >schedule</span
+                        >
+                        <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Press Office -->
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6"
+                  >
+                    <div class="flex items-center gap-4 mb-4">
+                      <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined">newspaper</span>
+                      </div>
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-black dark:text-white font-display"
+                        >
+                          Press Office
+                        </h3>
+                        <p class="text-primary font-medium">Media Relations</p>
+                      </div>
+                    </div>
+                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >location_on</span
+                        >
+                        <span>Administration Building, Room 201</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >phone</span
+                        >
+                        <span>(312) 555-PRESS</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >schedule</span
+                        >
+                        <span>Daily: 8:00 AM - 6:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Visitor Services -->
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6"
+                  >
+                    <div class="flex items-center gap-4 mb-4">
+                      <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined"
+                          >support_agent</span
+                        >
+                      </div>
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-black dark:text-white font-display"
+                        >
+                          Visitor Services
+                        </h3>
+                        <p class="text-primary font-medium">Customer Support</p>
+                      </div>
+                    </div>
+                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >location_on</span
+                        >
+                        <span>Main Entrance, Information Booth</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >phone</span
+                        >
+                        <span>(312) 555-HELP</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >schedule</span
+                        >
+                        <span>Daily: 8:00 AM - 9:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Business Relations -->
+                  <div
+                    class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6"
+                  >
+                    <div class="flex items-center gap-4 mb-4">
+                      <div
+                        class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined">handshake</span>
+                      </div>
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-black dark:text-white font-display"
+                        >
+                          Business Relations
+                        </h3>
+                        <p class="text-primary font-medium">
+                          Partnerships & Sponsorships
+                        </p>
+                      </div>
+                    </div>
+                    <div class="space-y-3 text-gray-600 dark:text-gray-400">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >location_on</span
+                        >
+                        <span>Administration Building, Room 305</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >phone</span
+                        >
+                        <span>(312) 555-BUSINESS</span>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent"
+                          >schedule</span
+                        >
+                        <span>Monday - Friday: 10:00 AM - 4:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Contact Form Section -->
+              <section class="mt-16 px-4">
+                <h2
+                  class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display"
+                >
+                  Send Us a Message
+                </h2>
+
+                <div
+                  class="bg-white dark:bg-background-dark rounded-lg shadow-md p-8"
+                >
+                  <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label
+                          for="firstName"
+                          class="block text-sm font-medium text-black dark:text-white mb-2"
+                        >
+                          First Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="lastName"
+                          class="block text-sm font-medium text-black dark:text-white mb-2"
+                        >
+                          Last Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label
+                          for="email"
+                          class="block text-sm font-medium text-black dark:text-white mb-2"
+                        >
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="phone"
+                          class="block text-sm font-medium text-black dark:text-white mb-2"
+                        >
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        for="subject"
+                        class="block text-sm font-medium text-black dark:text-white mb-2"
+                      >
+                        Subject *
+                      </label>
+                      <select
+                        id="subject"
+                        name="subject"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                      >
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="press">Press Inquiry</option>
+                        <option value="business">Business Partnership</option>
+                        <option value="visitor">Visitor Information</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-black dark:text-white mb-2"
+                      >
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-background-dark text-black dark:text-white"
+                        placeholder="Please provide details about your inquiry..."
+                      ></textarea>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        id="newsletter"
+                        name="newsletter"
+                        class="w-4 h-4 text-accent bg-gray-100 border-gray-300 rounded focus:ring-accent focus:ring-2"
+                      />
+                      <label
+                        for="newsletter"
+                        class="text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        I would like to receive updates about the World's
+                        Columbian Exposition
+                      </label>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full md:w-auto bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </section>
+
+              <!-- Emergency Contact Section -->
+              <section class="mt-16 px-4 mb-10">
+                <div
+                  class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6"
+                >
+                  <h2
+                    class="text-2xl font-bold text-red-800 dark:text-red-200 mb-4 font-display"
+                  >
+                    Emergency Contact
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                      <div
+                        class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3"
+                      >
+                        <span class="material-symbols-outlined"
+                          >local_hospital</span
+                        >
+                      </div>
+                      <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">
+                        Medical Emergency
+                      </h3>
+                      <p class="text-sm text-red-600 dark:text-red-300">
+                        (312) 555-EMERGENCY
+                      </p>
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3"
+                      >
+                        <span class="material-symbols-outlined">security</span>
+                      </div>
+                      <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">
+                        Security
+                      </h3>
+                      <p class="text-sm text-red-600 dark:text-red-300">
+                        (312) 555-SECURITY
+                      </p>
+                    </div>
+                    <div class="text-center">
+                      <div
+                        class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-3"
+                      >
+                        <span class="material-symbols-outlined"
+                          >fire_truck</span
+                        >
+                      </div>
+                      <h3 class="font-bold text-red-800 dark:text-red-200 mb-2">
+                        Fire Department
+                      </h3>
+                      <p class="text-sm text-red-600 dark:text-red-300">
+                        (312) 555-FIRE
+                      </p>
+                    </div>
+                  </div>
+                  <p
+                    class="text-center text-sm text-red-600 dark:text-red-300 mt-4"
+                  >
+                    <strong>Note:</strong> In case of emergency, please contact
+                    the nearest fair official or visit any information booth.
+                  </p>
+                </div>
+              </section>
+            </main>
+
+            <!-- Footer -->
+            <footer
+              class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10"
+            >
+              <div
+                class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around"
+              >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.history') }}"
+                  >History of the Fair</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.organizers') }}"
+                  >Organizers</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.sponsors') }}"
+                  >Sponsors</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.news') }}"
+                  >Press</a
+                >
+                <a
+                  class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40"
+                  href="{{ url_for('main.contact') }}"
+                  >Contact</a
+                >
+              </div>
+              <p
+                class="text-black/60 dark:text-white/60 text-base font-normal leading-normal"
+              >
+                © 1893 World's Columbian Exposition
+              </p>
+            </footer>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- JavaScript -->
     <script src="/static/js/scripts.js"></script>
-</body>
+  </body>
 </html>

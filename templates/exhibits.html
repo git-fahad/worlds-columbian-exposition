@@ -1,198 +1,382 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chicago World's Fair - Exhibits Directory</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&amp;display=swap" rel="stylesheet"/>
-<style>
-        :root {
-            --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
-            --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(97,119,137)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
-        }
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chicago World's Fair - Exhibits Directory</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --checkbox-tick-svg: url("data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e");
+        --select-button-svg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(97,119,137)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e");
+      }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#138aec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101a22",
-                        "navy": "#0a192f",
-                        "cream": "#f5f5dc",
-                        "gold": "#daa520",
-                        "burgundy": "#800020",
-                        "emerald": "#50c878",
-                        "parchment": "#fcf5e5",
-                        "text-light": "#111518",
-                        "text-dark": "#e0e0e0"
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#138aec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+              navy: "#0a192f",
+              cream: "#f5f5dc",
+              gold: "#daa520",
+              burgundy: "#800020",
+              emerald: "#50c878",
+              parchment: "#fcf5e5",
+              "text-light": "#111518",
+              "text-dark": "#e0e0e0",
             },
-        }
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-parchment dark:bg-background-dark font-display text-text-light dark:text-text-dark">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gold/30 bg-cream/80 dark:bg-navy/80 backdrop-blur-sm px-10 py-3 fixed top-0 left-0 right-0 z-50">
-<div class="flex items-center gap-4 text-navy dark:text-cream">
-<div class="size-6 text-gold">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold tracking-[-0.015em]">Chicago World's Fair</h2>
-</div>
-<nav class="hidden md:flex flex-1 justify-center gap-9 text-navy dark:text-cream">
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.index') }}">Home</a>
-<a class="text-sm font-medium leading-normal text-gold dark:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.events') }}">Daily Schedule</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.about') }}">About the Fair</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-cream text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gold hover:text-navy dark:bg-cream dark:text-navy dark:hover:bg-gold dark:hover:text-navy">
-<span class="truncate">Language</span>
-</button>
-</div>
-</header>
-<main class="flex flex-1 pt-20">
-<aside class="w-[380px] h-full fixed top-20 left-0 bg-cream dark:bg-navy border-r border-gold/30 p-6 flex flex-col gap-6 overflow-y-auto">
-<div class="flex flex-col">
-<h1 class="text-2xl font-bold text-navy dark:text-cream">Directory of Exhibits &amp; Pavilions</h1>
-<p class="text-sm text-gray-600 dark:text-gray-400">Explore the wonders of the fair</p>
-</div>
-<div class="px-4 py-3">
-<label class="flex flex-col min-w-40 h-12 w-full">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-<div class="text-gray-600 dark:text-gray-400 flex border-none bg-parchment dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-parchment dark:bg-background-dark focus:border-none h-full placeholder:text-gray-500 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search exhibits..." value=""/>
-</div>
-</label>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="text-lg font-bold text-navy dark:text-cream px-4">Category</h3>
-<div class="px-4">
-<label class="flex gap-x-3 py-3 flex-row items-center cursor-pointer">
-<input checked="" class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none" type="checkbox"/>
-<p class="text-base font-normal leading-normal">National Pavilions</p>
-</label>
-<label class="flex gap-x-3 py-3 flex-row items-center cursor-pointer">
-<input class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none" type="checkbox"/>
-<p class="text-base font-normal leading-normal">Corporate Exhibits</p>
-</label>
-<label class="flex gap-x-3 py-3 flex-row items-center cursor-pointer">
-<input class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none" type="checkbox"/>
-<p class="text-base font-normal leading-normal">Scientific Displays</p>
-</label>
-<label class="flex gap-x-3 py-3 flex-row items-center cursor-pointer">
-<input class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none" type="checkbox"/>
-<p class="text-base font-normal leading-normal">Art &amp; Culture</p>
-</label>
-<label class="flex gap-x-3 py-3 flex-row items-center cursor-pointer">
-<input class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none" type="checkbox"/>
-<p class="text-base font-normal leading-normal">Entertainment</p>
-</label>
-</div>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="text-lg font-bold text-navy dark:text-cream px-4">Region</h3>
-<div class="px-4">
-<label class="flex flex-col min-w-40 flex-1">
-<select class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border border-gold/50 bg-parchment dark:bg-background-dark focus:border-gold/50 h-14 bg-[image:--select-button-svg] placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal">
-<option value="all">All Continents</option>
-<option value="na">North America</option>
-<option value="sa">South America</option>
-<option value="eu">Europe</option>
-<option value="as">Asia</option>
-<option value="af">Africa</option>
-<option value="au">Australia</option>
-</select>
-</label>
-</div>
-</div>
-<div class="flex flex-col gap-4 px-4">
-<h3 class="text-lg font-bold text-navy dark:text-cream">Popularity</h3>
-<input class="w-full h-2 bg-parchment dark:bg-background-dark rounded-lg appearance-none cursor-pointer" max="100" min="0" style="--thumb-bg: #daa520; --track-bg: #fcf5e5;" type="range" value="50"/>
-<style>
-                        input[type=range]::-webkit-slider-thumb { background: var(--thumb-bg); }
-                        input[type=range]::-moz-range-thumb { background: var(--thumb-bg); }
-                        input[type=range]::-ms-thumb { background: var(--thumb-bg); }
-                        input[type=range]::-webkit-slider-runnable-track { background: var(--track-bg); }
-                        input[type=range]::-moz-range-track { background: var(--track-bg); }
-                        input[type=range]::-ms-track { background: var(--track-bg); }
-                     </style>
-</div>
-<div class="border-t border-gold/30 mt-4 pt-4 px-4 flex flex-col gap-4">
-<h3 class="text-lg font-bold text-navy dark:text-cream">Results</h3>
-<div class="flex flex-col gap-4">
-<div class="p-4 rounded-lg bg-parchment dark:bg-background-dark shadow-md hover:shadow-lg hover:border-gold border border-transparent transition-all duration-300 cursor-pointer group">
-<div class="flex items-start gap-4">
-<img class="w-20 h-20 rounded-lg object-cover" data-alt="Italian Pavilion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8j02Bqow71JkOat_TIrcaCV_LucoOKmLUauK_CFFQrXKMDqmkvhJf5HCb-9QYr0e5kS-ugkRWBd--sYOpXtCsiYhQZSg4d_45gfpR9586W6iL4A7TndJURVAIh-ggfc3yQOOSAR3xsdHyHkQ_H9GXIESo2cEucfQRWCZuP515i9qkTtH8TxQjTt3i9yN53cdSIs9VPcBvQd8udmWszDiRvuut-u580j-KUXuHo0x2ldL8aym5LPiHt_9YRa-TVP6I8oRkAX0tlc"/>
-<div>
-<h4 class="font-bold text-navy dark:text-cream group-hover:text-gold">Italian Pavilion</h4>
-<p class="text-sm text-gray-600 dark:text-gray-400">National Pavilion</p>
-<p class="text-sm mt-1">A stunning showcase of Italian art, craftsmanship, and culinary delights.</p>
-</div>
-</div>
-</div>
-<div class="p-4 rounded-lg bg-parchment dark:bg-background-dark shadow-md hover:shadow-lg hover:border-gold border border-transparent transition-all duration-300 cursor-pointer group">
-<div class="flex items-start gap-4">
-<img class="w-20 h-20 rounded-lg object-cover" data-alt="Westinghouse Electric Exhibit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1gZKvFvhOJwRvlCn26nUDuN7WrwhirdO1O2jhEWZJuHfi9nauLqzqAJPhs4-eL6JhCM4bRMNXhwGHvOtx61cBY5f2-uO_W1823boqRPR1DqnqJyUUcdZwZ7wHuzt9yhm7IPaAINEjd-bmEqdwaz931DlB-KWPp9hsjhnrHaadYM2n-Q_2lSXl_BU4iIQVm90eWlsctpRnw1BxHLAAl9iHX76c-ivv3HWojnvgjBfA26_PR7btKxNvYs_n_9Ia9KyWx3-6RRg-Sc"/>
-<div>
-<h4 class="font-bold text-navy dark:text-cream group-hover:text-gold">Westinghouse Electric</h4>
-<p class="text-sm text-gray-600 dark:text-gray-400">Corporate Exhibit</p>
-<p class="text-sm mt-1">Witness the power of alternating current and the future of electricity.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</aside>
-<div class="flex-1 ml-[380px] p-8">
-<div class="relative w-full h-full rounded-xl overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="An illustrative map of the Chicago World's Fair grounds" data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGyK09PY9OyiFuQPInxEUQNIoNGBdlIGiFiUw0zakk1k806yuv5flK-k5k7P0eEr1tjzTp4Xxnc45H4x-ddQlL1-XspN4s7AaeUsBjEBs_DFrbHgEl1V07_06hsHngp85ixZiNOnHGZIjCrBJ79Td59ztkk6R3rVjV5rI04eIsRn6XW6vUikwMHS4UcvjDig8zppVTi_npQfzcoMpmIn1q-z5C2gHCVXPnvOVWk_1ccbof4lhSYHPmbv_LLLl7MBq8uafW7tmYzqs"/>
-<div class="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2 group">
-<div class="w-6 h-6 bg-gold rounded-full cursor-pointer ring-4 ring-gold/30 hover:ring-8 transition-all duration-300"></div>
-<div class="absolute bottom-full mb-2 w-48 bg-cream dark:bg-navy p-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<h5 class="font-bold text-navy dark:text-cream text-sm">Palace of Fine Arts</h5>
-<p class="text-xs text-gray-600 dark:text-gray-400">Home to a vast collection of international artworks.</p>
-</div>
-</div>
-<div class="absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2 group">
-<div class="w-6 h-6 bg-gold rounded-full cursor-pointer ring-4 ring-gold/30 hover:ring-8 transition-all duration-300"></div>
-<div class="absolute bottom-full mb-2 w-48 bg-cream dark:bg-navy p-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<h5 class="font-bold text-navy dark:text-cream text-sm">Ferris Wheel</h5>
-<p class="text-xs text-gray-600 dark:text-gray-400">Take a ride on the original engineering marvel.</p>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="w-full bg-cream/80 dark:bg-navy/80 border-t border-gold/30 text-center py-4 mt-auto">
-<div class="text-xs text-gray-600 dark:text-gray-400">
-<p>© 1893 Chicago World's Fair. All rights reserved.</p>
-<p class="mt-1">
-<a class="hover:text-gold" href="#">Contact Us</a> | <a class="hover:text-gold" href="#">Fair Policies</a>
-</p>
-</div>
-</footer>
-</div>
-</body></html>
+  </head>
+  <body
+    class="bg-parchment dark:bg-background-dark font-display text-text-light dark:text-text-dark"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gold/30 bg-cream/80 dark:bg-navy/80 backdrop-blur-sm px-10 py-3 fixed top-0 left-0 right-0 z-50"
+      >
+        <div class="flex items-center gap-4 text-navy dark:text-cream">
+          <div class="size-6 text-gold">
+            <svg
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold tracking-[-0.015em]">
+            Chicago World's Fair
+          </h2>
+        </div>
+        <nav
+          class="hidden md:flex flex-1 justify-center gap-9 text-navy dark:text-cream"
+        >
+          <a
+            class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold"
+            href="{{ url_for('main.index') }}"
+            >Home</a
+          >
+          <a
+            class="text-sm font-medium leading-normal text-gold dark:text-gold"
+            href="{{ url_for('main.exhibits') }}"
+            >Exhibits</a
+          >
+          <a
+            class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold"
+            href="{{ url_for('main.events') }}"
+            >Daily Schedule</a
+          >
+          <a
+            class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold"
+            href="{{ url_for('main.tickets') }}"
+            >Tickets</a
+          >
+          <a
+            class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold"
+            href="{{ url_for('main.about') }}"
+            >About the Fair</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-cream text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gold hover:text-navy dark:bg-cream dark:text-navy dark:hover:bg-gold dark:hover:text-navy"
+          >
+            <span class="truncate">Language</span>
+          </button>
+        </div>
+      </header>
+      <main class="flex flex-1 pt-20">
+        <aside
+          class="w-[380px] h-full fixed top-20 left-0 bg-cream dark:bg-navy border-r border-gold/30 p-6 flex flex-col gap-6 overflow-y-auto"
+        >
+          <div class="flex flex-col">
+            <h1 class="text-2xl font-bold text-navy dark:text-cream">
+              Directory of Exhibits &amp; Pavilions
+            </h1>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Explore the wonders of the fair
+            </p>
+          </div>
+          <div class="px-4 py-3">
+            <label class="flex flex-col min-w-40 h-12 w-full">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-gray-600 dark:text-gray-400 flex border-none bg-parchment dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0"
+                >
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-parchment dark:bg-background-dark focus:border-none h-full placeholder:text-gray-500 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search exhibits..."
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h3 class="text-lg font-bold text-navy dark:text-cream px-4">
+              Category
+            </h3>
+            <div class="px-4">
+              <label
+                class="flex gap-x-3 py-3 flex-row items-center cursor-pointer"
+              >
+                <input
+                  checked=""
+                  class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none"
+                  type="checkbox"
+                />
+                <p class="text-base font-normal leading-normal">
+                  National Pavilions
+                </p>
+              </label>
+              <label
+                class="flex gap-x-3 py-3 flex-row items-center cursor-pointer"
+              >
+                <input
+                  class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none"
+                  type="checkbox"
+                />
+                <p class="text-base font-normal leading-normal">
+                  Corporate Exhibits
+                </p>
+              </label>
+              <label
+                class="flex gap-x-3 py-3 flex-row items-center cursor-pointer"
+              >
+                <input
+                  class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none"
+                  type="checkbox"
+                />
+                <p class="text-base font-normal leading-normal">
+                  Scientific Displays
+                </p>
+              </label>
+              <label
+                class="flex gap-x-3 py-3 flex-row items-center cursor-pointer"
+              >
+                <input
+                  class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none"
+                  type="checkbox"
+                />
+                <p class="text-base font-normal leading-normal">
+                  Art &amp; Culture
+                </p>
+              </label>
+              <label
+                class="flex gap-x-3 py-3 flex-row items-center cursor-pointer"
+              >
+                <input
+                  class="h-5 w-5 rounded border-gold/50 border-2 bg-transparent text-gold checked:bg-gold checked:border-gold checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gold/50 focus:outline-none"
+                  type="checkbox"
+                />
+                <p class="text-base font-normal leading-normal">
+                  Entertainment
+                </p>
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h3 class="text-lg font-bold text-navy dark:text-cream px-4">
+              Region
+            </h3>
+            <div class="px-4">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border border-gold/50 bg-parchment dark:bg-background-dark focus:border-gold/50 h-14 bg-[image:--select-button-svg] placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="all">All Continents</option>
+                  <option value="na">North America</option>
+                  <option value="sa">South America</option>
+                  <option value="eu">Europe</option>
+                  <option value="as">Asia</option>
+                  <option value="af">Africa</option>
+                  <option value="au">Australia</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 px-4">
+            <h3 class="text-lg font-bold text-navy dark:text-cream">
+              Popularity
+            </h3>
+            <input
+              class="w-full h-2 bg-parchment dark:bg-background-dark rounded-lg appearance-none cursor-pointer"
+              max="100"
+              min="0"
+              style="--thumb-bg: #daa520; --track-bg: #fcf5e5"
+              type="range"
+              value="50"
+            />
+            <style>
+              input[type="range"]::-webkit-slider-thumb {
+                background: var(--thumb-bg);
+              }
+              input[type="range"]::-moz-range-thumb {
+                background: var(--thumb-bg);
+              }
+              input[type="range"]::-ms-thumb {
+                background: var(--thumb-bg);
+              }
+              input[type="range"]::-webkit-slider-runnable-track {
+                background: var(--track-bg);
+              }
+              input[type="range"]::-moz-range-track {
+                background: var(--track-bg);
+              }
+              input[type="range"]::-ms-track {
+                background: var(--track-bg);
+              }
+            </style>
+          </div>
+          <div
+            class="border-t border-gold/30 mt-4 pt-4 px-4 flex flex-col gap-4"
+          >
+            <h3 class="text-lg font-bold text-navy dark:text-cream">Results</h3>
+            <div class="flex flex-col gap-4">
+              <div
+                class="p-4 rounded-lg bg-parchment dark:bg-background-dark shadow-md hover:shadow-lg hover:border-gold border border-transparent transition-all duration-300 cursor-pointer group"
+              >
+                <div class="flex items-start gap-4">
+                  <img
+                    class="w-20 h-20 rounded-lg object-cover"
+                    data-alt="Italian Pavilion"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8j02Bqow71JkOat_TIrcaCV_LucoOKmLUauK_CFFQrXKMDqmkvhJf5HCb-9QYr0e5kS-ugkRWBd--sYOpXtCsiYhQZSg4d_45gfpR9586W6iL4A7TndJURVAIh-ggfc3yQOOSAR3xsdHyHkQ_H9GXIESo2cEucfQRWCZuP515i9qkTtH8TxQjTt3i9yN53cdSIs9VPcBvQd8udmWszDiRvuut-u580j-KUXuHo0x2ldL8aym5LPiHt_9YRa-TVP6I8oRkAX0tlc"
+                  />
+                  <div>
+                    <h4
+                      class="font-bold text-navy dark:text-cream group-hover:text-gold"
+                    >
+                      Italian Pavilion
+                    </h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      National Pavilion
+                    </p>
+                    <p class="text-sm mt-1">
+                      A stunning showcase of Italian art, craftsmanship, and
+                      culinary delights.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="p-4 rounded-lg bg-parchment dark:bg-background-dark shadow-md hover:shadow-lg hover:border-gold border border-transparent transition-all duration-300 cursor-pointer group"
+              >
+                <div class="flex items-start gap-4">
+                  <img
+                    class="w-20 h-20 rounded-lg object-cover"
+                    data-alt="Westinghouse Electric Exhibit"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1gZKvFvhOJwRvlCn26nUDuN7WrwhirdO1O2jhEWZJuHfi9nauLqzqAJPhs4-eL6JhCM4bRMNXhwGHvOtx61cBY5f2-uO_W1823boqRPR1DqnqJyUUcdZwZ7wHuzt9yhm7IPaAINEjd-bmEqdwaz931DlB-KWPp9hsjhnrHaadYM2n-Q_2lSXl_BU4iIQVm90eWlsctpRnw1BxHLAAl9iHX76c-ivv3HWojnvgjBfA26_PR7btKxNvYs_n_9Ia9KyWx3-6RRg-Sc"
+                  />
+                  <div>
+                    <h4
+                      class="font-bold text-navy dark:text-cream group-hover:text-gold"
+                    >
+                      Westinghouse Electric
+                    </h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Corporate Exhibit
+                    </p>
+                    <p class="text-sm mt-1">
+                      Witness the power of alternating current and the future of
+                      electricity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="flex-1 ml-[380px] p-8">
+          <div
+            class="relative w-full h-full rounded-xl overflow-hidden shadow-2xl"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="An illustrative map of the Chicago World's Fair grounds"
+              data-location="Chicago"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGyK09PY9OyiFuQPInxEUQNIoNGBdlIGiFiUw0zakk1k806yuv5flK-k5k7P0eEr1tjzTp4Xxnc45H4x-ddQlL1-XspN4s7AaeUsBjEBs_DFrbHgEl1V07_06hsHngp85ixZiNOnHGZIjCrBJ79Td59ztkk6R3rVjV5rI04eIsRn6XW6vUikwMHS4UcvjDig8zppVTi_npQfzcoMpmIn1q-z5C2gHCVXPnvOVWk_1ccbof4lhSYHPmbv_LLLl7MBq8uafW7tmYzqs"
+            />
+            <div
+              class="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2 group"
+            >
+              <div
+                class="w-6 h-6 bg-gold rounded-full cursor-pointer ring-4 ring-gold/30 hover:ring-8 transition-all duration-300"
+              ></div>
+              <div
+                class="absolute bottom-full mb-2 w-48 bg-cream dark:bg-navy p-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              >
+                <h5 class="font-bold text-navy dark:text-cream text-sm">
+                  Palace of Fine Arts
+                </h5>
+                <p class="text-xs text-gray-600 dark:text-gray-400">
+                  Home to a vast collection of international artworks.
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2 group"
+            >
+              <div
+                class="w-6 h-6 bg-gold rounded-full cursor-pointer ring-4 ring-gold/30 hover:ring-8 transition-all duration-300"
+              ></div>
+              <div
+                class="absolute bottom-full mb-2 w-48 bg-cream dark:bg-navy p-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              >
+                <h5 class="font-bold text-navy dark:text-cream text-sm">
+                  Ferris Wheel
+                </h5>
+                <p class="text-xs text-gray-600 dark:text-gray-400">
+                  Take a ride on the original engineering marvel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="w-full bg-cream/80 dark:bg-navy/80 border-t border-gold/30 text-center py-4 mt-auto"
+      >
+        <div class="text-xs text-gray-600 dark:text-gray-400">
+          <p>© 1893 Chicago World's Fair. All rights reserved.</p>
+          <p class="mt-1">
+            <a class="hover:text-gold" href="#">Contact Us</a> |
+            <a class="hover:text-gold" href="#">Fair Policies</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
