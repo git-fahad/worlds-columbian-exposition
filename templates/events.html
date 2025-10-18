@@ -51,10 +51,10 @@
 <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Chicago World's Fair</h2>
 </div>
 <nav class="hidden md:flex items-center gap-9">
-<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Home</a>
-<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Exhibits</a>
-<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary text-primary" href="#">Events</a>
-<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Plan Your Visit</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="{{ url_for('main.index') }}">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="{{ url_for('main.exhibits') }}">Exhibits</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary text-primary" href="{{ url_for('main.events') }}">Events</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="{{ url_for('main.tickets') }}">Plan Your Visit</a>
 </nav>
 </div>
 <div class="flex flex-1 justify-end gap-4">

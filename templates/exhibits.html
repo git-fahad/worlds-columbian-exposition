@@ -59,11 +59,11 @@
 <h2 class="text-xl font-bold tracking-[-0.015em]">Chicago World's Fair</h2>
 </div>
 <nav class="hidden md:flex flex-1 justify-center gap-9 text-navy dark:text-cream">
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="#">Home</a>
-<a class="text-sm font-medium leading-normal text-gold dark:text-gold" href="#">Exhibits</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="#">Daily Schedule</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="#">Tickets</a>
-<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="#">About the Fair</a>
+<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.index') }}">Home</a>
+<a class="text-sm font-medium leading-normal text-gold dark:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
+<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.events') }}">Daily Schedule</a>
+<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets</a>
+<a class="text-sm font-medium leading-normal hover:text-gold dark:hover:text-gold" href="{{ url_for('main.about') }}">About the Fair</a>
 </nav>
 <div class="flex items-center gap-4">
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-cream text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gold hover:text-navy dark:bg-cream dark:text-navy dark:hover:bg-gold dark:hover:text-navy">

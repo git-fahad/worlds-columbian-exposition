@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago World's Fair - Organizers</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Tailwind CSS CDN (for development) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#001f3f",
+                        accent: "#daa520",
+                        secondary: "#fdf6e3",
+                        "background-light": "#fdf6e3",
+                        "background-dark": "#101a22",
+                        "text-light": "#111518",
+                        "text-dark": "#fdf6e3",
+                    },
+                    fontFamily: {
+                        display: ["Newsreader", "serif"],
+                        sans: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <!-- Header -->
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3">
+                        <div class="flex items-center gap-4 text-black dark:text-white">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold leading-tight font-display">
+                                Chicago World's Fair
+                            </h2>
+                        </div>
+                        <div class="hidden md:flex flex-1 justify-end gap-8">
+                            <nav class="flex items-center gap-9">
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.events') }}">Map & Schedule</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets & Lodging</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('business.business_registration') }}">For Businesses</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.news') }}">News</a>
+                            </nav>
+                        </div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <main class="flex-grow">
+                        <!-- Hero Section -->
+                        <div class="@container mt-5">
+                            <div class="@[480px]:px-4 @[480px]:py-3">
+                                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYH4P46KCO36Y0xl4DVsmAf9w_cIXX0xDDj-oLaC1Yl8Th6ajwNEY33z6UW23P4fkpYUlycsC7KSTAq_kCwGHsYAhgHHSIVMRZXpucpDVJJ4KLVxLfTYZ9IVfTsv6AAZdTsMhMcAa0OCx5Q7vxit_TSWHckTktLvo-RxHTSAuDdiefh2Sx3qdccBe-SZqH-ZhT5N5C-m6rBes3VacylO1STi-pn0U9rw6Rync8FyWM4ASh3NNHVetb3uFxi4DPyFfOv5V9g6jMO4U');">
+                                    <div class="flex p-6">
+                                        <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight">
+                                            The Organizers
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Executive Leadership Section -->
+                        <section class="mt-10 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Executive Leadership
+                            </h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- President -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border-l-4 border-accent">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-16 h-16 bg-accent text-primary rounded-full flex items-center justify-center font-bold text-xl">
+                                            HCA
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
+                                                Harlow Niles Higinbotham
+                                            </h3>
+                                            <p class="text-accent font-medium">President</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        As President of the World's Columbian Exposition, Higinbotham oversaw the entire operation, 
+                                        coordinating between government officials, business leaders, and international participants 
+                                        to ensure the fair's success.
+                                    </p>
+                                </div>
+
+                                <!-- Director of Works -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border-l-4 border-primary">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                            DB
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
+                                                Daniel Burnham
+                                            </h3>
+                                            <p class="text-primary font-medium">Director of Works</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Burnham was responsible for the architectural vision and construction coordination of the entire 
+                                        fairgrounds. His leadership brought together the finest architects and artists of the era.
+                                    </p>
+                                </div>
+
+                                <!-- Chief of Construction -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border-l-4 border-green-500">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                            JW
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
+                                                John Wellborn Root
+                                            </h3>
+                                            <p class="text-green-500 font-medium">Chief of Construction</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Root worked closely with Burnham to oversee the massive construction project, ensuring that 
+                                        the architectural vision was realized within the tight timeline and budget constraints.
+                                    </p>
+                                </div>
+
+                                <!-- Secretary -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                            JN
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-black dark:text-white font-display">
+                                                John Newhouse
+                                            </h3>
+                                            <p class="text-purple-500 font-medium">Secretary</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Newhouse managed the administrative aspects of the exposition, handling correspondence, 
+                                        documentation, and coordination with participating nations and exhibitors.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Board of Directors Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Board of Directors
+                            </h2>
+                            
+                            <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                    The Board of Directors consisted of prominent business leaders, civic officials, and philanthropists 
+                                    who provided strategic oversight and financial backing for the exposition.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            CP
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">Charles P. Huntington</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Railroad Executive</p>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            MF
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">Marshall Field</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Department Store Magnate</p>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            PS
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">Philip D. Armour</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Meat Packing Industrialist</p>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            GC
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">George M. Pullman</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Railroad Car Manufacturer</p>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            CW
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">Carter H. Harrison Sr.</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Mayor of Chicago</p>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-3">
+                                            JP
+                                        </div>
+                                        <h4 class="font-bold text-black dark:text-white mb-1">John P. Hopkins</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Banking Executive</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Board of Lady Managers Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Board of Lady Managers
+                            </h2>
+                            
+                            <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-16 h-16 bg-pink-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                        BP
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white font-display">
+                                            Bertha Honoré Palmer
+                                        </h3>
+                                        <p class="text-pink-500 font-medium">President, Board of Lady Managers</p>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                    The Board of Lady Managers was a groundbreaking organization that ensured women's participation 
+                                    in the exposition. Led by Bertha Palmer, they oversaw the Woman's Building and advocated for 
+                                    women's representation in all aspects of the fair.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h4 class="font-bold text-black dark:text-white mb-3">Key Achievements:</h4>
+                                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">check_circle</span>
+                                                Designed and curated the Woman's Building
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">check_circle</span>
+                                                Organized international women's congresses
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">check_circle</span>
+                                                Showcased women's contributions to art and industry
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">check_circle</span>
+                                                Raised funds for women's educational programs
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-black dark:text-white mb-3">Notable Members:</h4>
+                                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                            <li>• Jane Addams - Social Reformer</li>
+                                            <li>• Frances Willard - Temperance Leader</li>
+                                            <li>• Susan B. Anthony - Suffrage Activist</li>
+                                            <li>• Ellen Henrotin - Civic Leader</li>
+                                            <li>• Mary Cassatt - Artist</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- International Commission Section -->
+                        <section class="mt-16 px-4 mb-10">
+                            <div class="bg-primary text-white rounded-lg p-8">
+                                <h2 class="text-2xl font-bold mb-4 font-display">International Commission</h2>
+                                <p class="mb-6 text-lg">
+                                    The exposition's success was made possible through the cooperation of international commissioners 
+                                    from 46 participating nations, who coordinated their countries' exhibits and cultural presentations.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h3 class="font-bold mb-3">Major Participating Nations</h3>
+                                        <div class="grid grid-cols-2 gap-2 text-sm">
+                                            <div>• United Kingdom</div>
+                                            <div>• France</div>
+                                            <div>• Germany</div>
+                                            <div>• Italy</div>
+                                            <div>• Russia</div>
+                                            <div>• Japan</div>
+                                            <div>• Brazil</div>
+                                            <div>• Mexico</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold mb-3">Commission Responsibilities</h3>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Coordinating national exhibits</li>
+                                            <li>• Managing cultural presentations</li>
+                                            <li>• Facilitating diplomatic relations</li>
+                                            <li>• Overseeing trade demonstrations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <!-- Footer -->
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.history') }}">History of the Fair</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.organizers') }}">Organizers</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.sponsors') }}">Sponsors</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.news') }}">Press</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.contact') }}">Contact</a>
+                        </div>
+                        <p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">
+                            © 1893 World's Columbian Exposition
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

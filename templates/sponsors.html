@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago World's Fair - Sponsors</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Tailwind CSS CDN (for development) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#001f3f",
+                        accent: "#daa520",
+                        secondary: "#fdf6e3",
+                        "background-light": "#fdf6e3",
+                        "background-dark": "#101a22",
+                        "text-light": "#111518",
+                        "text-dark": "#fdf6e3",
+                    },
+                    fontFamily: {
+                        display: ["Newsreader", "serif"],
+                        sans: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <!-- Header -->
+                    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-4 sm:px-10 py-3">
+                        <div class="flex items-center gap-4 text-black dark:text-white">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold leading-tight font-display">
+                                Chicago World's Fair
+                            </h2>
+                        </div>
+                        <div class="hidden md:flex flex-1 justify-end gap-8">
+                            <nav class="flex items-center gap-9">
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.exhibits') }}">Exhibits</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.events') }}">Map & Schedule</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.tickets') }}">Tickets & Lodging</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('business.business_registration') }}">For Businesses</a>
+                                <a class="text-sm font-medium leading-normal hover:text-gold" href="{{ url_for('main.news') }}">News</a>
+                            </nav>
+                        </div>
+                    </header>
+
+                    <!-- Main Content -->
+                    <main class="flex-grow">
+                        <!-- Hero Section -->
+                        <div class="@container mt-5">
+                            <div class="@[480px]:px-4 @[480px]:py-3">
+                                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-lg min-h-80"
+                                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsWcHi3yMl-BxrG-7b7R4g9lShD0YKKbYN-YwGN7b6GdKJ_FnblghNhI0tYrw5NcEFyee8qOVK3oMztHSuj-9I9u5SKhYFqnjo_t7NWhiTG_oQizP6H6QEvhwb67rDv_jqjr6zqAKJUzFYDnoNI08t2t1HonjOKgm8U6hTW262-rW9O0hgRH8YiMykGPWzcXwte7qdiPBXRgNsnm8BtuojMJUvwd2Be59K4N4u9kwjTiuRWVbiK2aWkmLfluO--PZrQqhjLLOmx38');">
+                                    <div class="flex p-6">
+                                        <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight font-display tracking-tight">
+                                            Our Sponsors
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Platinum Sponsors Section -->
+                        <section class="mt-10 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Platinum Sponsors
+                            </h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- Marshall Field & Company -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-lg p-8 border-2 border-accent">
+                                    <div class="text-center">
+                                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">
+                                            MF
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Marshall Field & Company
+                                        </h3>
+                                        <p class="text-accent font-semibold mb-4">Department Store Empire</p>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                            Chicago's premier department store provided significant financial backing and showcased 
+                                            the latest in retail innovation and luxury goods from around the world.
+                                        </p>
+                                        <div class="flex justify-center items-center gap-2 text-sm text-accent">
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pullman Palace Car Company -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-lg p-8 border-2 border-accent">
+                                    <div class="text-center">
+                                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">
+                                            PC
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Pullman Palace Car Company
+                                        </h3>
+                                        <p class="text-accent font-semibold mb-4">Luxury Rail Transportation</p>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                            The Pullman Company demonstrated the future of rail travel with their luxurious sleeping cars 
+                                            and provided transportation services for fair visitors.
+                                        </p>
+                                        <div class="flex justify-center items-center gap-2 text-sm text-accent">
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                            <span class="material-symbols-outlined">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Gold Sponsors Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Gold Sponsors
+                            </h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <!-- Armour & Company -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            AC
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Armour & Company
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Meat Packing Industry</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Pioneered refrigeration and meat processing technologies showcased at the fair.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Illinois Central Railroad -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            IC
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Illinois Central Railroad
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Railroad Transportation</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Provided direct rail service to the fairgrounds and demonstrated modern rail technology.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Westinghouse Electric -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            WE
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Westinghouse Electric
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Electrical Innovation</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Powered the fair with alternating current and demonstrated electrical lighting systems.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- McCormick Harvesting Machine Company -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            MH
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            McCormick Harvesting Machine Company
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Agricultural Machinery</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Showcased revolutionary agricultural equipment that transformed American farming.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Chicago Board of Trade -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            CB
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Chicago Board of Trade
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Commodities Trading</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Demonstrated modern trading practices and Chicago's role as a financial center.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Sears, Roebuck & Company -->
+                                <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                                            SR
+                                        </div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-2 font-display">
+                                            Sears, Roebuck & Company
+                                        </h3>
+                                        <p class="text-primary font-semibold mb-3">Mail Order Innovation</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                                            Showcased the revolutionary mail-order catalog system and consumer goods distribution.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Silver Sponsors Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                Silver Sponsors
+                            </h2>
+                            
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        CN
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">Chicago & North Western Railway</h4>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        BH
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">Burlington & Quincy Railroad</h4>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        AT
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">American Telephone & Telegraph</h4>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        GE
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">General Electric Company</h4>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        CP
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">Chicago Packing Company</h4>
+                                </div>
+                                
+                                <div class="text-center p-4 bg-white dark:bg-background-dark rounded-lg shadow-sm">
+                                    <div class="w-12 h-12 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-2">
+                                        FS
+                                    </div>
+                                    <h4 class="font-bold text-sm text-black dark:text-white">First National Bank of Chicago</h4>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- International Sponsors Section -->
+                        <section class="mt-16 px-4">
+                            <h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-6 font-display">
+                                International Sponsors
+                            </h2>
+                            
+                            <div class="bg-white dark:bg-background-dark rounded-lg shadow-md p-6">
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                    International corporations and governments provided substantial support for their national pavilions 
+                                    and cultural exhibits, showcasing the global reach of the exposition.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">European Sponsors</h3>
+                                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                British East India Company
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                French Ministry of Commerce
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                German Industrial Consortium
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                Italian Art & Culture Society
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div>
+                                        <h3 class="text-xl font-bold text-black dark:text-white mb-4 font-display">Asian & American Sponsors</h3>
+                                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                Japanese Imperial Commission
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                Brazilian Coffee Association
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                Mexican Mining Consortium
+                                            </li>
+                                            <li class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-accent text-sm">business</span>
+                                                Canadian Pacific Railway
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Partnership Opportunities Section -->
+                        <section class="mt-16 px-4 mb-10">
+                            <div class="bg-primary text-white rounded-lg p-8">
+                                <h2 class="text-2xl font-bold mb-4 font-display">Partnership Opportunities</h2>
+                                <p class="mb-6 text-lg">
+                                    The World's Columbian Exposition offers unparalleled opportunities for businesses to showcase 
+                                    their innovations and reach a global audience of millions.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">27M+</div.existing_templates>
+                                        <div class="text-sm opacity-90">Potential Customers</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">6</div>
+                                        <div class="text-sm opacity-90">Months of Exposure</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold mb-2">46</div>
+                                        <div class="text-sm opacity-90">Countries Represented</div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 text-center">
+                                    <a href="{{ url_for('business.business_registration') }}" 
+                                       class="inline-block bg-accent text-primary px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors">
+                                        Become a Sponsor
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <!-- Footer -->
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-solid border-primary/50 mt-10">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.history') }}">History of the Fair</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.organizers') }}">Organizers</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.sponsors') }}">Sponsors</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.news') }}">Press</a>
+                            <a class="text-black/80 dark:text-white/80 text-base font-normal leading-normal min-w-40" href="{{ url_for('main.contact') }}">Contact</a>
+                        </div>
+                        <p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">
+                            © 1893 World's Columbian Exposition
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
