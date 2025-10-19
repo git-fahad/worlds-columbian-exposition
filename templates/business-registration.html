@@ -78,46 +78,26 @@
 </div>
 </div>
 <div class="flex flex-col gap-3 p-4">
-<div class="flex gap-6 justify-between"><p class="text-[#111518] dark:text-white text-base font-medium leading-normal">Step 1 of 3: Company Information</p></div>
-<div class="rounded bg-[#dbe1e6] dark:bg-[#333e4a]"><div class="h-2 rounded bg-primary" style="width: 33%;"></div></div>
+<div class="flex gap-6 justify-between"><p class="text-[#111518] dark:text-white text-base font-medium leading-normal" id="step-indicator">Step 1 of 3: Company Information</p></div>
+<div class="rounded bg-[#dbe1e6] dark:bg-[#333e4a]"><div class="h-2 rounded bg-primary" id="progress-bar" style="width: 33%;"></div></div>
 </div>
-<form class="space-y-8 p-4">
+<form class="space-y-8 p-4" id="business-registration-form">
+<!-- Step 1: Company Information -->
+<div class="form-step" data-step="1">
 <section>
 <h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Company Details</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="company-name">Company Name</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-name" placeholder="Enter your company's name" value=""/>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-name" placeholder="Enter your company's name" value="" required/>
 </div>
 <div class="flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="company-address">Company Address</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-address" placeholder="Enter your company's address" value=""/>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-address" placeholder="Enter your company's address" value="" required/>
 </div>
 <div class="md:col-span-2 flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="company-description">Company Description</label>
-<textarea class="form-textarea w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-description" placeholder="Provide a brief description of your company" rows="4"></textarea>
-</div>
-</div>
-</section>
-<section>
-<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Exhibit Details</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col">
-<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="exhibit-type">Exhibit Type</label>
-<select class="form-select w-full min-w-0 flex-1 overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="exhibit-type">
-<option>Technology &amp; Innovation</option>
-<option>Arts &amp; Culture</option>
-<option>Manufacturing &amp; Industry</option>
-<option>International Pavilion</option>
-</select>
-</div>
-<div class="flex flex-col">
-<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="space-requirements">Space Requirements (sq. ft.)</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="space-requirements" placeholder="e.g., 500" type="number" value=""/>
-</div>
-<div class="md:col-span-2 flex flex-col">
-<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="exhibit-description">Exhibit Description</label>
-<textarea class="form-textarea w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="exhibit-description" placeholder="Describe your proposed exhibit" rows="4"></textarea>
+<textarea class="form-textarea w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="company-description" placeholder="Provide a brief description of your company" rows="4" required></textarea>
 </div>
 </div>
 </section>
@@ -126,18 +106,79 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="contact-name">Full Name</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-name" placeholder="Enter the contact person's name" value=""/>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-name" placeholder="Enter the contact person's name" value="" required/>
 </div>
 <div class="flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="contact-email">Email Address</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-email" placeholder="Enter a valid email" type="email" value=""/>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-email" placeholder="Enter a valid email" type="email" value="" required/>
 </div>
 <div class="flex flex-col">
 <label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="contact-phone">Phone Number</label>
-<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-phone" placeholder="Enter a phone number" type="tel" value=""/>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="contact-phone" placeholder="Enter a phone number" type="tel" value="" required/>
 </div>
 </div>
 </section>
+</div>
+
+<!-- Step 2: Exhibit Details -->
+<div class="form-step hidden" data-step="2">
+<section>
+<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Exhibit Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="exhibit-type">Exhibit Type</label>
+<select class="form-select w-full min-w-0 flex-1 overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="exhibit-type" required>
+<option value="">Select exhibit type</option>
+<option value="technology">Technology &amp; Innovation</option>
+<option value="arts">Arts &amp; Culture</option>
+<option value="manufacturing">Manufacturing &amp; Industry</option>
+<option value="international">International Pavilion</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="space-requirements">Space Requirements (sq. ft.)</label>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="space-requirements" placeholder="e.g., 500" type="number" value="" required/>
+</div>
+<div class="md:col-span-2 flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="exhibit-description">Exhibit Description</label>
+<textarea class="form-textarea w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="exhibit-description" placeholder="Describe your proposed exhibit" rows="4" required></textarea>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Exhibition Preferences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="preferred-location">Preferred Location</label>
+<select class="form-select w-full min-w-0 flex-1 overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="preferred-location" required>
+<option value="">Select preferred location</option>
+<option value="main-hall">Main Exhibition Hall</option>
+<option value="technology-pavilion">Technology Pavilion</option>
+<option value="arts-pavilion">Arts Pavilion</option>
+<option value="international-pavilion">International Pavilion</option>
+<option value="outdoor">Outdoor Exhibition Space</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="exhibition-duration">Exhibition Duration</label>
+<select class="form-select w-full min-w-0 flex-1 overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" id="exhibition-duration" required>
+<option value="">Select duration</option>
+<option value="full-fair">Full Fair Duration (6 months)</option>
+<option value="3-months">3 Months</option>
+<option value="1-month">1 Month</option>
+<option value="2-weeks">2 Weeks</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col">
+<label class="text-[#111518] dark:text-white text-base font-medium leading-normal pb-2" for="special-requirements">Special Requirements</label>
+<textarea class="form-textarea w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111518] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbe1e6] dark:border-[#333e4a] bg-white dark:bg-background-dark focus:border-primary placeholder:text-[#617789] p-[15px] text-base font-normal leading-normal" id="special-requirements" placeholder="Any special requirements for your exhibit (electrical, security, etc.)" rows="3"></textarea>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Step 3: Final Details & Documents -->
+<div class="form-step hidden" data-step="3">
 <section>
 <h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Supporting Documents</h2>
 <div class="mt-2 flex justify-center rounded-xl border-2 border-dashed border-[#dbe1e6] dark:border-[#333e4a] px-6 py-10">
@@ -154,11 +195,39 @@
 </div>
 </div>
 </section>
+<section>
+<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Terms & Conditions</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<input type="checkbox" id="terms-agreement" class="mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" required/>
+<label for="terms-agreement" class="text-sm text-[#111518] dark:text-white">
+I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a> of the Chicago World's Fair.
+</label>
+</div>
+<div class="flex items-start gap-3">
+<input type="checkbox" id="marketing-consent" class="mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"/>
+<label for="marketing-consent" class="text-sm text-[#111518] dark:text-white">
+I consent to receive marketing communications about the Chicago World's Fair and related events.
+</label>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Review & Submit</h2>
+<div class="bg-[#f6f7f8] dark:bg-[#1a1a1a] rounded-lg p-6">
+<p class="text-[#111518] dark:text-white text-sm mb-4">Please review your information before submitting:</p>
+<div id="review-summary" class="space-y-2 text-sm text-[#617789] dark:text-[#a1b3c2]">
+<!-- Review summary will be populated by JavaScript -->
+</div>
+</div>
+</section>
+</div>
+
 <div class="flex justify-between pt-8">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#dbe1e6] dark:bg-[#333e4a] text-[#111518] dark:text-white text-base font-bold leading-normal tracking-[0.015em]" type="button">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#dbe1e6] dark:bg-[#333e4a] text-[#111518] dark:text-white text-base font-bold leading-normal tracking-[0.015em]" type="button" id="back-btn" style="display: none;">
 <span class="truncate">Back</span>
 </button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]" type="submit">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]" type="button" id="next-btn">
 <span class="truncate">Next Step</span>
 </button>
 </div>
@@ -168,4 +237,151 @@
 </div>
 </div>
 </div>
+
+<script src="/static/js/scripts.js"></script>
+<script>
+// Business Registration Multi-Step Form
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('business-registration-form');
+    const steps = document.querySelectorAll('.form-step');
+    const stepIndicator = document.getElementById('step-indicator');
+    const progressBar = document.getElementById('progress-bar');
+    const nextBtn = document.getElementById('next-btn');
+    const backBtn = document.getElementById('back-btn');
+    const reviewSummary = document.getElementById('review-summary');
+    
+    let currentStep = 1;
+    const totalSteps = 3;
+    
+    // Step titles
+    const stepTitles = {
+        1: 'Step 1 of 3: Company Information',
+        2: 'Step 2 of 3: Exhibit Details',
+        3: 'Step 3 of 3: Final Review & Submit'
+    };
+    
+    function showStep(step) {
+        steps.forEach((s, index) => {
+            if (index + 1 === step) {
+                s.classList.remove('hidden');
+            } else {
+                s.classList.add('hidden');
+            }
+        });
+        
+        // Update step indicator
+        stepIndicator.textContent = stepTitles[step];
+        
+        // Update progress bar
+        const progress = (step / totalSteps) * 100;
+        progressBar.style.width = progress + '%';
+        
+        // Update buttons
+        if (step === 1) {
+            backBtn.style.display = 'none';
+            nextBtn.innerHTML = '<span class="truncate">Next Step</span>';
+        } else if (step === totalSteps) {
+            backBtn.style.display = 'block';
+            nextBtn.innerHTML = '<span class="truncate">Submit</span>';
+        } else {
+            backBtn.style.display = 'block';
+            nextBtn.innerHTML = '<span class="truncate">Next Step</span>';
+        }
+    }
+    
+    function validateStep(step) {
+        const currentStepElement = document.querySelector(`[data-step="${step}"]`);
+        const requiredFields = currentStepElement.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('border-red-500');
+                showError(field, 'This field is required');
+            } else {
+                field.classList.remove('border-red-500');
+                clearError(field);
+            }
+        });
+        
+        return isValid;
+    }
+    
+    function showError(field, message) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+        errorDiv.textContent = message;
+        
+        const existingError = field.parentElement.querySelector('.error-message');
+        if (existingError) {
+            existingError.remove();
+        }
+        
+        field.parentElement.appendChild(errorDiv);
+    }
+    
+    function clearError(field) {
+        const errorDiv = field.parentElement.querySelector('.error-message');
+        if (errorDiv) {
+            errorDiv.remove();
+        }
+    }
+    
+    function updateReviewSummary() {
+        const formData = new FormData(form);
+        const summary = [];
+        
+        // Company Information
+        summary.push('<strong>Company Information:</strong>');
+        summary.push(`Company: ${document.getElementById('company-name').value}`);
+        summary.push(`Address: ${document.getElementById('company-address').value}`);
+        summary.push(`Contact: ${document.getElementById('contact-name').value}`);
+        summary.push(`Email: ${document.getElementById('contact-email').value}`);
+        summary.push(`Phone: ${document.getElementById('contact-phone').value}`);
+        
+        // Exhibit Details
+        summary.push('<br><strong>Exhibit Details:</strong>');
+        summary.push(`Type: ${document.getElementById('exhibit-type').value}`);
+        summary.push(`Space: ${document.getElementById('space-requirements').value} sq. ft.`);
+        summary.push(`Location: ${document.getElementById('preferred-location').value}`);
+        summary.push(`Duration: ${document.getElementById('exhibition-duration').value}`);
+        
+        reviewSummary.innerHTML = summary.join('<br>');
+    }
+    
+    // Next button click
+    nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (validateStep(currentStep)) {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+                
+                // Update review summary on step 3
+                if (currentStep === 3) {
+                    updateReviewSummary();
+                }
+            } else {
+                // Submit form
+                form.submit();
+            }
+        }
+    });
+    
+    // Back button click
+    backBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+    
+    // Initialize
+    showStep(1);
+});
+</script>
 </body></html>
